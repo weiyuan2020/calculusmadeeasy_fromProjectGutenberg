@@ -1,0 +1,841 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                                                         %
+% The Project Gutenberg EBook of Calculus Made Easy, by Silvanus Thompson %
+%                                                                         %
+% This eBook is for the use of anyone anywhere in the United States and   %
+% most other parts of the world at no cost and with almost no restrictions%
+% whatsoever. You may copy it, give it away or re-use it under the terms  %
+% of the Project Gutenberg License included with this eBook or online at  %
+% www.gutenberg.org. If you are not located in the United States, you     %
+% will have to check the laws of the country where you are located before %
+% using this eBook.                                                       %
+%                                                                         %
+%                                                                         %
+% Title: Calculus Made Easy                                               %
+%        Being a very-simplest introduction to those beautiful            %
+%        methods which are generally called by the terrifying names       %
+%        of the Differentia                                               %
+%                                                                         %
+% Author: Silvanus Thompson                                               %
+%                                                                         %
+% Release Date: October 9, 2012 [eBook #33283]                            %
+% Most recently updated: November 18, 2021                     %
+%                                                                         %
+% Language: English                                                       %
+%                                                                         %
+% Character set encoding: UTF-8                                           %
+%                                                                         %
+% *** START OF THIS PROJECT GUTENBERG EBOOK CALCULUS MADE EASY ***        %
+%                                                                         %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\def\ebook{33283}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%% Packages and substitutions:                                      %%
+%%                                                                  %%
+%% book:     Required.                                              %%
+%% inputenc: Standard DP encoding. Required.                        %%
+%%                                                                  %%
+%% ifthen:   Logical conditionals. Required.                        %%
+%%                                                                  %%
+%% amsmath:  AMS mathematics enhancements. Required.                %%
+%% amssymb:  Additional mathematical symbols. Required.             %%
+%%                                                                  %%
+%% alltt:    Fixed-width font environment. Required.                %%
+%% array:    Enhanced tabular features. Required.                   %%
+%% dcolumn:  Decimal-aligned data columns. Required.                %%
+%%                                                                  %%
+%% footmisc: Extended footnote capabilities. Required.              %%
+%% perpage:  Start footnote numbering on each page. Required.       %%
+%%                                                                  %%
+%% indentfirst: Indent first word of each sectional unit. Optional. %%
+%%                                                                  %%
+%% calc:     Length calculations. Required.                         %%
+%%                                                                  %%
+%% fancyhdr: Enhanced running headers and footers. Required.        %%
+%%                                                                  %%
+%% graphicx: Standard interface for graphics inclusion. Required.   %%
+%% wrapfig:  Illustrations surrounded by text. Required.            %%
+%%                                                                  %%
+%% geometry: Enhanced page layout package. Required.                %%
+%% hyperref: Hypertext embellishments for pdf output. Required.     %%
+%%                                                                  %%
+%%                                                                  %%
+%% Producer's Comments:                                             %%
+%%                                                                  %%
+%%   Changes are noted in this file in three ways.                  %%
+%%   1. \DPnote{} for in-line `placeholder' notes.                  %%
+%%   2. \DPtypo{}{} for typographical corrections, showing original %%
+%%      and replacement text side-by-side.                          %%
+%%   3. [** PP: Note]s for lengthier or stylistic comments.         %%
+%%                                                                  %%
+%%                                                                  %%
+%% Compilation Flags:                                               %%
+%%                                                                  %%
+%%   The following behavior may be controlled by boolean flags.     %%
+%%                                                                  %%
+%%   ForPrinting (false by default):                                %%
+%%   Compile a screen-optimized PDF file. Set to false for print-   %%
+%%   optimized file (pages cropped, one-sided, blue hyperlinks).    %%
+%%                                                                  %%
+%%                                                                  %%
+%% PDF pages: 292 (if ForPrinting set to false)                     %%
+%% PDF page size: 6 x 8in (non-standard)                            %%
+%% PDF bookmarks: created, point to ToC entries                     %%
+%% PDF document info: filled in                                     %%
+%% Images: 74 pdf diagrams                                          %%
+%%                                                                  %%
+%% Summary of log file:                                             %%
+%% * Five invisible overfull hboxes in alignments.                  %%
+%% * Two underfull hboxes.                                          %%
+%%                                                                  %%
+%%                                                                  %%
+%% Compile History:                                                 %%
+%%                                                                  %%
+%% July, 2010: adhere (Andrew D. Hwang)                             %%
+%%             texlive2007, GNU/Linux                               %%
+%%                                                                  %%
+%% Command block:                                                   %%
+%%                                                                  %%
+%%     pdflatex x3                                                  %%
+%%                                                                  %%
+%%                                                                  %%
+%% October 2012: pglatex.                                           %%
+%%   Compile this project with:                                     %%
+%%   pdflatex 33283-t.tex ..... THREE times                         %%
+%%                                                                  %%
+%%   pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian)       %%
+%%                                                                       %%
+%% November 2021: okrick.                                                %%
+%%         MiKTeX Console 4.3, Windows 10 Home                           %%
+%%         TeXworks 0.6.6 used to generate PDF output.                   %%
+%%                                                                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listfiles
+\documentclass[12pt]{book}[2005/09/16]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}[2006/05/05]
+
+\usepackage{ifthen}[2001/05/26]  %% Logical conditionals
+
+\usepackage{amsmath}[2000/07/18] %% Displayed equations
+\usepackage{amssymb}[2002/01/22] %% and additional symbols
+
+\usepackage{alltt}[1997/06/16]   %% boilerplate, credits, license
+
+\usepackage{array}[2005/08/23]   %% extended array/tabular features
+\usepackage{dcolumn}
+
+                                 %% extended footnote capabilities
+\usepackage[symbol,perpage]{footmisc}[2005/03/17]
+\usepackage{perpage}[2006/07/15]
+
+\usepackage{multicol}
+
+\usepackage{graphicx}[1999/02/16]%% For diagrams
+\usepackage{wrapfig}%% For diagram on 219.png
+
+\IfFileExists{indentfirst.sty}{%
+  \usepackage{indentfirst}[1995/11/23]
+}{}
+
+\usepackage{calc}[2005/08/06]
+
+% for running heads
+\usepackage{fancyhdr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Interlude:  Set up PRINTING (default) or SCREEN VIEWING %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ForPrinting=true (default)           false
+% Asymmetric margins                   Symmetric margins
+% Black hyperlinks                     Blue hyperlinks
+% Start Preface, ToC, etc. recto       No blank verso pages
+%
+% Chapter-like ``Sections'' start both recto and verso in the scanned
+% book. This behavior has been retained.
+\newboolean{ForPrinting}
+
+%% UNCOMMENT the next line for a PRINT-OPTIMIZED VERSION of the text %%
+%\setboolean{ForPrinting}{true}
+
+%% Initialize values to ForPrinting=false
+\newcommand{\Margins}{hmarginratio=1:1}     % Symmetric margins
+\newcommand{\HLinkColor}{blue}              % Hyperlink color
+\newcommand{\PDFPageLayout}{SinglePage}
+\newcommand{\TransNote}{Transcriber's Note}
+\newcommand{\TransNoteCommon}{%
+  Minor presentational changes, and minor typographical and numerical
+  corrections, have been made without comment. All textual changes are
+  detailed in the \LaTeX\ source file.
+  \bigskip
+}
+
+\newcommand{\TransNoteText}{%
+  \TransNoteCommon
+
+  This PDF file is optimized for screen viewing, but may easily be
+  recompiled for printing. Please see the preamble of the \LaTeX\
+  source file for instructions.
+}
+%% Re-set if ForPrinting=true
+\ifthenelse{\boolean{ForPrinting}}{%
+  \renewcommand{\Margins}{hmarginratio=2:3} % Asymmetric margins
+  \renewcommand{\HLinkColor}{black}         % Hyperlink color
+  \renewcommand{\PDFPageLayout}{TwoPageRight}
+  \renewcommand{\TransNote}{Transcriber's Note}
+  \renewcommand{\TransNoteText}{%
+    \TransNoteCommon
+
+    This PDF file is optimized for printing, but may easily be
+    recompiled for screen viewing. Please see the preamble of the
+    \LaTeX\ source file for instructions.
+  }
+}{% If ForPrinting=false, don't skip to recto
+  \renewcommand{\cleardoublepage}{\clearpage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  End of PRINTING/SCREEN VIEWING code; back to packages  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\boolean{ForPrinting}}{%
+  \setlength{\paperwidth}{8.5in}%
+  \setlength{\paperheight}{11in}%
+  \usepackage[body={5in,7in},\Margins]{geometry}[2002/07/08]
+}{%
+  \setlength{\paperwidth}{6in}%
+  \setlength{\paperheight}{8in}%
+  \raggedbottom
+  \usepackage[body={5in,7in},\Margins,includeheadfoot]{geometry}[2002/07/08]
+}
+% \usepackage[body={5.25in,8.4in},\Margins]{geometry}[2002/07/08]
+
+\providecommand{\ebook}{00000}    % Overridden during white-washing
+\usepackage[pdftex,
+  hyperfootnotes=false,
+  pdftitle={The Project Gutenberg eBook \#\ebook: Calculus Made Easy, 2nd Edition},
+  pdfauthor={Silvanus Phillips Thompson},
+  pdfkeywords={Paula Appling, Don Bindner, Chris Curnow, Andrew D. Hwang,
+               Project Gutenberg Online Distributed Proofreading Team},
+  pdfstartview=Fit,    % default value
+  pdfstartpage=1,      % default value
+  pdfpagemode=UseNone, % default value
+  bookmarks=true,      % default value
+  linktocpage=false,   % default value
+  pdfpagelayout=\PDFPageLayout,
+  pdfdisplaydoctitle,
+  pdfpagelabels=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=0,
+  colorlinks=true,
+  linkcolor=\HLinkColor]{hyperref}[2007/02/07]
+
+% Re-crop screen-formatted version, accommodating wide displays
+\ifthenelse{\boolean{ForPrinting}}
+  {}
+  {\hypersetup{pdfpagescrop= 20 0 412 580}}
+
+
+%%%% Fixed-width environment to format PG boilerplate %%%%
+\newenvironment{PGtext}{%
+\begin{alltt}
+\fontsize{9.2}{10.5}\ttfamily\selectfont}%
+{\end{alltt}}
+
+\newcounter{mytnote}
+\newcommand{\TNote}[1]{%
+  \refstepcounter{mytnote}%
+  \begin{minipage}{0.85\textwidth}
+    \small
+    \phantomsection
+    \pdfbookmark[0]{Transcriber's Note}{TransNote\themytnote}
+    \subsection*{\centering\normalfont\scshape%
+      \normalsize\MakeLowercase{\TransNote}}%
+
+    \raggedright
+    #1
+  \end{minipage}
+}
+
+\newcommand{\Corrections}{%
+  The diagrams have been re-created, using accompanying formulas or
+  descriptions from the text where possible.
+  \bigskip
+
+  In Chapter~XIV, pages \Pageref[]{erratum0}--\Pageref[]{erratum0a},
+  numerical values of $\left(1+\frac{1}{n}\right)^n$, $\epsilon^x$,
+  and related quantities of British currency have been verified and
+  rounded to the nearest digit.
+  \bigskip
+
+  On \Pageref[page]{erratum1} (page~146 in the original), the graphs
+  of the natural logarithm and exponential functions, Figures
+  38~and~39, have been interchanged to match the surrounding text.
+  \medskip
+
+  The vertical dashed lines in the natural logarithm graph, Figure~39
+  (Figure~38 in the original), have been moved to match the data in
+  the corresponding table.
+  \bigskip
+
+  On \Pageref[page]{erratum2} (page~167 in the original), the graphs
+  of the sine and cosine functions, Figures 44~and~45, have been
+  interchanged to match the surrounding text.
+}
+
+% Misc text formatting tricks
+\newlength{\TmpLen}
+\newlength{\MySkip}
+\newcommand{\PadTxt}[3][c]{%
+  \settowidth{\TmpLen}{#2}%
+  \makebox[\TmpLen][#1]{#3}%
+}
+
+\newcommand{\PadTo}[3][c]{\PadTxt[#1]{$#2$}{$#3$}}
+
+% Style-setting
+\renewcommand{\footnoterule}{}
+\newcommand{\loosen}{\spaceskip0.5em plus 0.5em minus 0.25em}
+\setlength{\emergencystretch}{1.5em}
+
+\renewcommand{\topfraction}{0.6}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.1}
+\DeclareMathSizes{12}{12}{8}{7}
+\newcommand{\ds}{\displaystyle}
+
+%% No hrule in page header
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\baselinestretch}{1.33}
+
+% Top-level footnote numbers restart on each page
+% \MakePerPage{footnote}
+
+% Stretch-fit argument to a box as wide as \TmpLen
+\newcommand{\SetBox}[2][s]{%
+  \ifthenelse{\equal{#1}{s}}{%
+    \makebox[\TmpLen][#1]{\loosen #2}%
+  }{%
+    \makebox[\TmpLen][#1]{#2}%
+  }%
+}
+
+% For Table of Standard Forms
+\newcommand{\ColumnHead}[1]{%
+  \multicolumn{3}{|c|}{\textbf{#1}}
+}
+
+%% Macro for reducing space between adjacent display environments
+\newcommand{\CancelMathSkip}{\vspace{-\belowdisplayskip}}
+\newcommand{\BindMath}[1]{%
+{\vspace{\abovedisplayskip}%
+{\setlength{\abovedisplayskip}{0pt}%
+\setlength{\belowdisplayskip}{0pt}%
+#1}\vspace{\belowdisplayskip}}%
+}
+
+% Running heads
+\newcommand{\Heading}[1]{\textbf{\footnotesize\MakeUppercase{#1}}}
+
+\newcommand{\SetOddHead}[1]{%
+  \fancyhead{}%
+  \setlength{\headheight}{15pt}%
+  \fancyhead[CE]{\Heading{Calculus Made Easy}}%
+  \fancyhead[CO]{\Heading{#1}}%
+  \ifthenelse{\boolean{ForPrinting}}%
+             {\fancyhead[RO,LE]{\thepage}}%
+             {\fancyhead[R]{\thepage}}%
+}
+
+\newcommand{\SetBothHeads}[1]{%
+  \fancyhead{}%
+  \fancyhead[C]{\Heading{#1}}%
+}
+
+% Table of Contents
+% Redefine headings for table of contents & index
+\renewcommand{\contentsname}{%
+  \protect\Large\protect\normalfont\protect\centering%
+  CONTENTS.\\
+}
+
+\newcommand{\ToCBox}[1]{%
+  \PadTxt[r]{XVIII.}{#1}\quad%
+}
+
+\newcommand{\ToCAnchor}{}
+
+%\ToCLine[font style]{Chapter}{Title}{label}
+\newcommand{\ToCLine}[4][\scshape]{%
+  \par\noindent\label{toc:#4}%
+  \ifthenelse{\not\equal{\pageref{toc:#4}}{\ToCAnchor}}{%
+    \noindent\textsc{\scriptsize Chapter\hfill Page}\medskip%
+    \renewcommand{\ToCAnchor}{\pageref{toc:#4}}\par%
+  }{}%
+  \settowidth{\TmpLen}{9999}%
+  \noindent\parbox[b]{\linewidth-\TmpLen}{\ToCBox{#2}%
+    \rule{0pt}{16pt}#1\hangindent6em #3\dotfill}% [** TN: Hard-coded spaces]
+  \PadTxt[r]{9999}{\pageref{#4}}\smallskip%
+}
+
+\newcommand{\ChapterSkip}{\vspace*{0.1\linewidth}}
+\newcommand{\flushpage}{\clearpage\fancyhf{}\cleardoublepage}
+
+% Numbered: \Chapter[Running Head]{number}{Title}
+\newcommand{\Chapter}[3][]{%
+  \flushpage
+  \phantomsection\label{chap:#2}\pdfbookmark[0]{Chapter #2}{Chapter #2}%
+  \ifthenelse{\not\equal{#1}{}}{%
+    \SetOddHead{#1}%
+  }{%
+    \SetOddHead{#3}%
+  }%
+
+  \addtocontents{toc}{\protect\ToCLine{#2.}{#3}{chap:#2}}
+  \thispagestyle{empty}
+  \ChapterSkip%
+  \section*{\centering\normalfont\Large CHAPTER #2.}
+  \subsection*{\centering\normalfont\large\MakeUppercase{#3}.}
+}
+
+
+% Unnumbered, but has a ToC entry: \AltChapter[Running Head]{Title}
+%[** TN: Uses the book's chapter structure to select ToC entry font]
+\newcommand{\AltChapter}[2][]{%
+  \ifthenelse{\equal{#2}{Prologue}}{%
+    \pagestyle{fancy}
+  }{}
+  \flushpage
+  \phantomsection\label{#2}\pdfbookmark[0]{#2}{#2}%
+  \ifthenelse{\not\equal{#1}{}}{%
+    \SetOddHead{#1}%
+    \addtocontents{toc}{\protect\ToCLine{}{#1}{#2}}%
+  }{%
+    \SetOddHead{#2}%
+    \ifthenelse{\equal{#2}{Table of Standard Forms}}{%
+      \addtocontents{toc}{\protect\ToCLine[\bfseries]{}{#2}{#2}}%
+    }{%
+      \addtocontents{toc}{\protect\ToCLine{}{#2}{#2}}%
+      \ChapterSkip%
+    }%
+  }%
+
+  \thispagestyle{empty}
+  \section*{\centering\normalfont\Large\MakeUppercase{#2.}}
+}
+
+
+% For the Preface and Epilogue; no ToC entry
+\newcommand\ChapterStar[2][]{%
+  \flushpage
+  \phantomsection
+
+  \ifthenelse{\not\equal{#1}{}}{%
+    \SetOddHead{#1}%
+    \pdfbookmark[0]{#1}{#1}%
+  }{%
+    \SetOddHead{#2}%
+    \pdfbookmark[0]{#2}{#2}%
+  }%
+  \thispagestyle{empty}
+  \ChapterSkip%
+  \section*{\centering\normalfont\Large\MakeUppercase{#2.}}
+}
+
+\newcounter{SectionNo}
+\setcounter{SectionNo}{0}
+
+\newcommand\Section[2][]{%
+  \section*{\centering\normalfont\normalsize\bfseries#2}%
+  \refstepcounter{SectionNo}%
+  \phantomsection\pdfbookmark[1]{#2}{#2}\label{section:\theSectionNo}%
+  \ifthenelse{\not\equal{#1}{}}{\SetOddHead{#1}}{}%
+}
+
+%tweaking \subsection - added italics & indent
+\newcommand\Subsection[1]{%
+  \medskip\pagebreak[1]\par\textit{#1}\pagebreak[0]\par%
+}
+
+%tweaking \paragraph - added italics & indent
+\newcommand{\Paragraph}[1]{\medskip\pagebreak[1]\par\textit{#1}}
+
+\newcommand{\Note}[1]{%
+  \clearpage
+  \section*{\centering\normalfont\normalsize #1}
+}
+
+% Dedicated structural macros
+\newcommand{\Case}[1]{\Subsection{Case~\upshape{#1}.}}
+
+% "Example." goes on its own line; otherwise, run-in heading
+\newcommand{\Example}[1]{%
+  \ifthenelse{\equal{#1}{.}}{%
+    \Subsection{\textit{Example.}}%
+  }{%
+    \Paragraph{\textit{Example}~\upshape{#1}}%
+  }%
+}
+
+\newcommand{\Examples}[1]{%
+  \ifthenelse{\equal{#1}{.}}{%
+    \Subsection{\textit{Examples.}}%
+  }{%
+    \Subsection{\textit{#1}}%
+  }
+}
+
+
+% Exercises section heading
+% \Exercises[Running Head]{I} (See p.~254 for Answers.)
+\newcommand{\Exercises}[2][]{%
+  \tb\textit{Exercises~#2.}\quad
+  \phantomsection\pdfbookmark[1]{Exercises #2}{Exercises #2}\label{Ex:#2}%
+  \ifthenelse{\not\equal{#1}{}}{\SetOddHead{#1}}{}%
+}
+
+% Loosen up page spacing
+%\setlength{\parsep}{1ex plus 0.5ex minus 1ex}
+%\setlength{\partopsep}{0.5ex plus 1.5ex minus 0.25ex}
+%\setlength{\itemsep}{1ex plus 1ex minus 1ex}
+
+\newboolean{InMulticols}% true iff we're in a multicolumn envt
+
+% List item formatting
+\newcommand{\ListInit}{%
+  \setlength{\leftmargin}{0pt}%
+  \setlength{\labelwidth}{\parindent}%
+  \setlength{\labelsep}{0.5em}%
+  \setlength{\itemsep}{0pt}%
+  \setlength{\listparindent}{\parindent}
+  \setlength{\itemindent}{2\parindent}%
+}
+
+\newcommand{\SublistInit}{%
+  \setlength{\leftmargin}{\parindent}%
+  \setlength{\rightmargin}{3em}%
+  \setlength{\labelwidth}{1em}%
+  \setlength{\labelsep}{0.5em}%
+  \setlength{\itemsep}{0pt}%
+  \setlength{\listparindent}{\parindent}
+  \setlength{\itemindent}{2.5em}%
+}
+
+
+% List environment initializer for Answers section
+\newcommand{\ListInitAns}{%
+  \setlength{\leftmargin}{\parindent}%0pt
+  \setlength{\labelwidth}{\parindent}%
+  \setlength{\labelsep}{0.5em}%
+  \setlength{\itemsep}{2pt}%
+  \setlength{\listparindent}{\parindent}
+  \setlength{\itemindent}{0pt}%
+}
+
+% Reset number of columns *within a Problems or Answers environment*
+\newcommand{\ResetCols}[1]{%
+  \ifthenelse{\boolean{InMulticols}}{%
+  \end{multicols}%
+}{}
+\ifthenelse{\equal{#1}{1}}{%
+  \setboolean{InMulticols}{false}%
+}{%
+  \setboolean{InMulticols}{true}%
+  \begin{multicols}{#1}[\raggedcolumns]%
+  }%
+}
+
+% #1 = number of columns
+\newenvironment{Problems}[1][1]{%
+  \begin{list}{}{\ListInit}%
+  \ifthenelse{\equal{#1}{1}}{%
+    \setboolean{InMulticols}{false}%
+  }{%
+    \setboolean{InMulticols}{true}%
+    \begin{multicols}{#1}
+    }%
+  }{% End of envt code
+    \ifthenelse{\boolean{InMulticols}}{%
+    \end{multicols}%
+  }{}%
+  \setboolean{InMulticols}{false}
+\end{list}%
+}
+
+\newenvironment{SubProbs}{%
+  \begin{list}{}{\SublistInit}%
+  }{%
+  \end{list}%
+}
+
+\newenvironment{Answers}[4][1]{%
+  \ifthenelse{\not\equal{#2}{I}}{\vspace{12pt plus 24pt minus 12pt}\tb#4}{}%
+%
+  \section*{\centering\normalsize Exercises~#2.\quad\normalfont#3\label{AnsEx:#2}}%
+  \begin{list}{}{\ListInitAns}%
+    \ifthenelse{\equal{#1}{1}}{%
+      \setboolean{InMulticols}{false}% Update state; else
+    }{%
+      \setboolean{InMulticols}{true}%
+      \begin{multicols}{#1}[\raggedcolumns]%
+      }%
+    }{% End of envt code
+      \ifthenelse{\boolean{InMulticols}}{\end{multicols}}{}%
+  \end{list}%
+  \setboolean{InMulticols}{false}%
+}
+
+% Exercise and answer numbers
+\newcommand\Item[2][]{%
+   \item[#2]%
+   \ifthenelse{\not\equal{#1}{}}{\phantomsection\label{#1}}{}%
+}
+
+% Table entries
+\newcolumntype{.}[1]{D{.}{.}{#1}}
+
+\newcommand{\Td}[2][r]{%
+  \settowidth{\TmpLen}{9999}%
+  \ifthenelse{\equal{#1}{r}}{%
+    \makebox[\TmpLen][#1]{$#2$\;}%
+  }{%
+    \ifthenelse{\equal{#1}{l}}{%
+      \makebox[\TmpLen][#1]{\;$#2$}%
+    }{%
+      \makebox[\TmpLen][#1]{$#2$}%
+    }%
+  }%
+}
+
+% polynomial division on 051.png
+\newcommand\TmpColA{%
+  \begin{tabular}{@{}c|}$v + dv$\DStrut\\\hline\end{tabular}%
+}
+
+\newcommand\TmpColB{%
+  \;\begin{tabular}{@{}l@{}}$u + \dfrac{u· dv}{v}\DStrut$ \\\hline\end{tabular}%
+}
+
+% Catalogue macros
+\newcommand{\Catalogue}{%
+  \flushpage
+  \thispagestyle{empty}
+  \phantomsection\pdfbookmark[0]{Catalogue}{Catalogue}
+  \SetBothHeads{Catalogue}
+  \begin{center}
+    \large A SELECTION OF \\
+    % [** TN: Fake boldface smallcaps to avoid loading fontenc package]
+    \bfseries \Huge M\Large ATHEMATICAL \Huge W\Large ORKS
+    \tb
+  \end{center}
+}
+
+\newcommand{\License}{%
+  \flushpage
+  \thispagestyle{empty}
+  \phantomsection\pdfbookmark[0]{License}{License}
+  \SetBothHeads{License}
+}
+
+\newcommand{\Title}[1]{{\Large #1}}
+\newcommand{\Author}[1]{\textsc{#1}}
+
+\newcommand{\Book}[1]
+  {\smallskip\par\noindent\hangindent\parindent #1}
+
+
+% Illustrations
+\newcommand{\Graphic}[2][]{%
+  \ifthenelse{\equal{#1}{}}{%
+    \includegraphics{./images/#2.pdf}%
+  }{%
+    \includegraphics[width=#1]{./images/#2.pdf}%
+  }%
+}
+
+% Usage: \Figure[optional width]{File name}{Fig number}
+\newcommand{\Figure}[3][2.25in]{%
+  \begin{figure}[hbt]
+    \centering%
+    \Graphic[#1]{#2}%
+    \phantomsection\label{fig:#3}%
+  \end{figure}%
+}
+
+% For pairs of side-by-side images
+\newcommand{\Figures}[5][2.25in]{%
+  \begin{figure}[hbt]
+    \centering%
+    \makebox[0pt][c]{% Force centering even if sum of widths is large
+      \Graphic[#1]{#2}\qquad\Graphic[#1]{#3}%
+    }%
+    \phantomsection\label{fig:#4}\label{fig:#5}%
+  \end{figure}%
+}
+
+% Cross-referencing: anchors
+\newcommand{\DPPageSep}[2]{\Pagelabel{#2}}
+
+\newcommand{\Pagelabel}[1]
+  {\phantomsection\label{#1}}
+
+% and links
+\newcommand{\Pageref}[2][p.]{%
+  \ifthenelse{\not\equal{#1}{}}{%
+    \hyperref[#2]{#1~\pageref{#2}}%
+  }{%
+    \hyperref[#2]{\pageref{#2}}%
+  }%
+}
+
+\newcommand{\Pagerange}[2]{%
+  \ifthenelse{\equal{\pageref{#1}}{\pageref{#2}}}{%
+    \hyperref[#1]{p.~\pageref{#1}}%
+  }{%
+%[** TN: Formatting as pp. m--n instead of pp. n, n+1.]
+    pp.~\hyperref[#1]{\pageref{#1}}--\hyperref[#2]{\pageref{#2}}%
+  }%
+}
+
+\newcommand{\Fig}[1]{\hyperref[fig:#1]{Fig.~#1}}
+
+\newcommand{\Figs}[3]{%
+  Figs.\ \hyperref[fig:#1]{#1}~#2~\hyperref[fig:#3]{#3}}
+
+\newcommand{\NB}{\textit{N.B.}}
+\newcommand{\IE}{\textit{i.e.}}
+
+% Thought break
+\newcommand{\tb}[1][1.5in]{%
+%  \pagebreak[0]\begin{center}\rule{#1}{0.5pt}\end{center}\pagebreak[3]%
+  \pagebreak[0]\par{\centering\rule{#1}{0.5pt}\pagebreak[3]\par}%
+}
+
+
+\newcommand{\DPtypo}[2]{#2}% Corrections.
+\newcommand{\DPchg}[2]{#2}%  Stylistic tweaks
+\newcommand{\DPnote}[1]{}%   Notes to posterity
+
+% \DeclareUnicodeCharacter{00A3}{\pounds}
+% \DeclareUnicodeCharacter{00B0}{{}^\circ}
+% \DeclareUnicodeCharacter{00B1}{\pm}
+% \DeclareUnicodeCharacter{00B7}{\cdot}
+% \DeclareUnicodeCharacter{00D7}{\times}
+% \DeclareUnicodeCharacter{00F7}{\div}
+
+
+\newcommand{\Z}{\phantom{0}}
+\newcommand{\DStrut}{\rule[-12pt]{0pt}{32pt}}
+\newcommand{\Strut}{\rule{0pt}{16pt}}
+
+\newcommand{\First}[1]{\noindent\textsc{#1}}
+
+% "exponent fraction" factored out for special handling, if desired
+\newcommand{\efrac}[2]{\frac{#1}{#2}}
+
+\DeclareMathOperator{\Arccos}{arc\,cos}
+\renewcommand{\arccos}{\Arccos}
+
+\DeclareMathOperator{\Arcsin}{arc\,sin}
+\renewcommand{\arcsin}{\Arcsin}
+
+\DeclareMathOperator{\Arctan}{arc\,tan}
+\renewcommand{\arctan}{\Arctan}
+
+\DeclareMathOperator{\arcsec}{arc\,sec}
+\DeclareMathOperator{\cosec}{cosec}
+\DeclareMathOperator{\cotan}{cotan}
+\DeclareMathOperator{\sech}{sech}
+
+% DPalign
+\makeatletter
+\providecommand\shortintertext\intertext
+\newcount\DP@lign@no
+\newtoks\DP@lignb@dy
+\newif\ifDP@cr
+\newif\ifbr@ce
+\def\f@@zl@bar{\null}
+\def\addto@DPbody#1{\global\DP@lignb@dy\@xp{\the\DP@lignb@dy#1}}
+\def\parseb@dy#1{\ifx\f@@zl@bar#1\f@@zl@bar
+    \addto@DPbody{{}}\let\@next\parseb@dy
+  \else\ifx\end#1
+    \let\@next\process@DPb@dy
+    \ifDP@cr\else\addto@DPbody{\DPh@@kr&\DP@rint}\@xp\addto@DPbody\@xp{\@xp{\the\DP@lign@no}&}\fi
+    \addto@DPbody{\end}
+  \else\ifx\intertext#1
+    \def\@next{\eat@command0}%
+  \else\ifx\shortintertext#1
+    \def\@next{\eat@command1}%
+  \else\ifDP@cr\addto@DPbody{&\DP@lint}\@xp\addto@DPbody\@xp{\@xp{\the\DP@lign@no}&\DPh@@kl}
+          \DP@crfalse\fi
+    \ifx\begin#1\def\begin@stack{b}
+      \let\@next\eat@environment
+  \else\ifx\lintertext#1
+    \let\@next\linter@text
+  \else\ifx\rintertext#1
+    \let\@next\rinter@text
+  \else\ifx\\#1
+    \addto@DPbody{\DPh@@kr&\DP@rint}\@xp\addto@DPbody\@xp{\@xp{\the\DP@lign@no}&\\}\DP@crtrue
+    \global\advance\DP@lign@no\@ne
+    \let\@next\parse@cr
+  \else\check@braces#1!Q!Q!Q!\ifbr@ce\addto@DPbody{{#1}}\else
+    \addto@DPbody{#1}\fi
+    \let\@next\parseb@dy
+  \fi\fi\fi\fi\fi\fi\fi\fi\@next}
+\def\process@DPb@dy{\let\lintertext\@gobble\let\rintertext\@gobble
+  \@xp\start@align\@xp\tw@\@xp\st@rredtrue\@xp\m@ne\the\DP@lignb@dy}
+\def\linter@text#1{\@xp\DPlint\@xp{\the\DP@lign@no}{#1}\parseb@dy}
+\def\rinter@text#1{\@xp\DPrint\@xp{\the\DP@lign@no}{#1}\parseb@dy}
+\def\DPlint#1#2{\@xp\def\csname DP@lint:#1\endcsname{\text{#2}}}
+\def\DPrint#1#2{\@xp\def\csname DP@rint:#1\endcsname{\text{#2}}}
+\def\DP@lint#1{\ifbalancedlrint\@xp\ifx\csname
+DP@lint:#1\endcsname\relax\phantom
+  {\csname DP@rint:#1\endcsname}\else\csname DP@lint:#1\endcsname\fi
+  \else\csname DP@lint:#1\endcsname\fi}
+\def\DP@rint#1{\ifbalancedlrint\@xp\ifx\csname
+DP@rint:#1\endcsname\relax\phantom
+  {\csname DP@lint:#1\endcsname}\else\csname DP@rint:#1\endcsname\fi
+  \else\csname DP@rint:#1\endcsname\fi}
+\def\eat@command#1#2{\ifcase#1\addto@DPbody{\intertext{#2}}\or
+  \addto@DPbody{\shortintertext{#2}}\fi\DP@crtrue
+  \global\advance\DP@lign@no\@ne\parseb@dy}
+\def\parse@cr{\new@ifnextchar*{\parse@crst}{\parse@crst{}}}
+\def\parse@crst#1{\addto@DPbody{#1}\new@ifnextchar[{\parse@crb}{\parseb@dy}}
+\def\parse@crb[#1]{\addto@DPbody{[#1]}\parseb@dy}
+\def\check@braces#1#2!Q!Q!Q!{\def\dp@lignt@stm@cro{#2}\ifx
+  \empty\dp@lignt@stm@cro\br@cefalse\else\br@cetrue\fi}
+\def\eat@environment#1{\addto@DPbody{\begin{#1}}\begingroup
+  \def\@currenvir{#1}\let\@next\digest@env\@next}
+\def\digest@env#1\end#2{%
+  \edef\begin@stack{\push@begins#1\begin\end \@xp\@gobble\begin@stack}%
+  \ifx\@empty\begin@stack
+    \@checkend{#2}
+    \endgroup\let\@next\parseb@dy\fi
+    \addto@DPbody{#1\end{#2}}
+    \@next}
+\def\lintertext{lint}\def\rintertext{rint}
+\newif\ifbalancedlrint
+\let\DPh@@kl\empty\let\DPh@@kr\empty
+\def\DPg@therl{&\omit\hfil$\displaystyle}
+\def\DPg@therr{$\hfil}
+
+\newenvironment{DPalign*}[1][a]{%
+  \if m#1\balancedlrintfalse\else\balancedlrinttrue\fi
+  \global\DP@lign@no\z@\DP@crfalse
+  \DP@lignb@dy{&\DP@lint0&}\parseb@dy
+}{%
+  \endalign
+}
+\newenvironment{DPgather*}[1][a]{%
+  \if m#1\balancedlrintfalse\else\balancedlrinttrue\fi
+  \global\DP@lign@no\z@\DP@crfalse
+  \let\DPh@@kl\DPg@therl
+  \let\DPh@@kr\DPg@therr
+  \DP@lignb@dy{&\DP@lint0&\DPh@@kl}\parseb@dy
+}{%
+  \endalign
+}
+\makeatother

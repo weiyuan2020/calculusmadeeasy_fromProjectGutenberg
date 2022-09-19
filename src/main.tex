@@ -1,0 +1,277 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%% START OF DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{mydef.tex}
+\begin{document}
+
+\pagestyle{empty}
+\pagenumbering{Alph}
+
+\phantomsection
+\pdfbookmark[-1]{Front Matter}{Front Matter}
+
+%%%% PG BOILERPLATE %%%%
+\phantomsection
+\pdfbookmark[0]{Boilerplate}{Boilerplate}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\small
+\begin{PGtext}
+The Project Gutenberg EBook of Calculus Made Easy, by Silvanus Thompson
+
+This eBook is for the use of anyone anywhere in the United States and   
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms  
+of the Project Gutenberg License included with this eBook or online at  
+www.gutenberg.org. If you are not located in the United States, you     
+will have to check the laws of the country where you are located before 
+using this eBook.                                                       
+
+
+Title: Calculus Made Easy
+       Being a very-simplest introduction to those beautiful
+       methods which are generally called by the terrifying names
+       of the Differentia
+
+Author: Silvanus Thompson
+
+Release Date: October 9, 2012 [eBook #33283]
+Most recently updated: November 18, 2021
+
+Language: English
+
+Character set encoding: UTF-8     
+
+*** START OF THIS PROJECT GUTENBERG EBOOK CALCULUS MADE EASY ***
+\end{PGtext}
+\end{minipage}
+\end{center}
+
+\clearpage
+
+
+
+%%%% Credits and transcriber's note %%%%
+\begin{center}
+    \begin{minipage}{\textwidth}
+    \begin{PGtext}
+    \end{PGtext}
+    \end{minipage}
+    \end{center}
+    \vfill
+    \TNote{\TransNoteText}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%% FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \frontmatter
+    \pagenumbering{roman}
+    \DPPageSep{001.png}{i}%
+    
+    
+    % half-title page
+    \cleardoublepage
+    \null\vfill
+    \thispagestyle{empty}
+    \begin{center}
+    \Huge CALCULUS MADE EASY
+    \end{center}
+    \vfill
+    \DPPageSep{002.png}{ii}%
+    
+    
+    % publisher's page
+    \newpage
+    \null\vfill
+    \thispagestyle{empty}
+    \begin{center}
+    \setlength{\MySkip}{4pt}%
+    \Graphic[2in]{pubmark} \\[3\MySkip]
+    %
+    \small MACMILLAN AND CO., \textsc{Limited} \\[\MySkip]
+    \scriptsize LONDON : BOMBAY : CALCUTTA \\[\MySkip]
+    MELBOURNE \\[3\MySkip]
+    %
+    \small THE MACMILLAN COMPANY \\[\MySkip]
+    \scriptsize NEW YORK : BOSTON : CHICAGO \\[\MySkip]
+    DALLAS : SAN FRANCISCO \\[3\MySkip]
+    %
+    \small THE MACMILLAN CO. OF CANADA, \textsc{Ltd.} \\[\MySkip]
+    \scriptsize TORONTO \\[\MySkip]
+    \end{center}
+    \vfill
+    \DPPageSep{003.png}{iii}%
+    
+    
+    % title page
+    \cleardoublepage
+    \thispagestyle{empty}
+    \begin{center}
+    \setlength{\MySkip}{12pt}%
+    \Huge \textbf{CALCULUS MADE EASY:}
+    \vspace{2\MySkip}
+    
+    \normalsize\settowidth{\TmpLen}{THOSE BEAUTIFUL METHODS OF RECKONING }%
+    \SetBox{BEING A VERY-SIMPLEST INTRODUCTION TO} \\
+    \SetBox{THOSE BEAUTIFUL METHODS OF RECKONING} \\
+    \SetBox{WHICH ARE GENERALLY CALLED BY THE} \\
+    \SetBox[c]{TERRIFYING NAMES OF THE}
+    \vspace{2\MySkip}
+    
+    \large DIFFERENTIAL CALCULUS \\[\MySkip]
+    \small AND THE \\[\MySkip]
+    \large INTEGRAL CALCULUS.
+    \vfill
+    
+    \small BY \\
+    \Large F.~R.~S.
+    \vfill\vfill
+    
+    \textit{\large SECOND EDITION, ENLARGED}
+    \vfill\vfill\vfill\vfill
+    
+    \large\settowidth{\TmpLen}{ST. MARTIN'S STREET, LONDON}%
+    \SetBox{MACMILLAN AND CO., LIMITED} \\
+    \SetBox{ST. MARTIN'S STREET, LONDON} \\
+    \SetBox[c]{\oldstylenums{1914}}
+    \end{center}
+    \DPPageSep{004.png}{iv}%
+    
+    
+    % copyright page
+    \newpage
+    \null\vfill
+    \thispagestyle{empty}
+    \begin{center}
+    \footnotesize
+    \textit{COPYRIGHT.}
+    \bigskip
+    
+    First Edition 1910.\\
+    Reprinted 1911 (twice), 1912, 1913.\\
+    Second Edition 1914.
+    \end{center}
+    \vfill
+    \DPPageSep{005.png}{v}%
+    
+    
+    \cleardoublepage
+    \thispagestyle{empty}
+    \null\vfill
+    \begin{quote}
+    What one fool can do, another can. \\
+    \raggedleft(\textit{Ancient Simian Proverb.})
+    \end{quote}
+    \vfill
+    \DPPageSep{006.png}{vi}%
+    %[Blank Page]
+    \DPPageSep{007.png}{vii}%
+    
+    
+    \ChapterStar[Preface]{Preface to the Second Edition}
+    
+    \First{The} surprising success of this work has led the
+    author to add a considerable number of worked
+    examples and exercises. Advantage has also been
+    taken to enlarge certain parts where experience
+    showed that further explanations would be useful.
+    
+    The author acknowledges with gratitude many
+    valuable suggestions and letters received from teachers,
+    students, and---critics.
+    
+    \medskip
+    \emph{October}, 1914.
+    \DPPageSep{008.png}{viii}%
+    %[Blank Page]
+    \DPPageSep{009.png}{ix}%
+    
+    \cleardoublepage
+    \tableofcontents
+    \iffalse %%%% Original ToC text %%%%
+    
+    CONTENTS.
+    
+    CHAPTER        PAGE
+    
+    Prologue  xi
+    
+    I. To deliver you from the Preliminary Terrors   1
+    
+    II. On Different Degrees of Smallness  3
+    
+    III. On Relative Growings   9
+    
+    IV. Simplest Cases 18
+    
+    V. Next Stage. What to do with Constants  26
+    
+    VI. Sums, Differences, Products, and Quotients  35
+    
+    VII. Successive Differentiation  49
+    
+    VIII. When Time varies   52
+    
+    IX. Introducing a Useful Dodge  67
+    
+    X. Geometrical Meaning of Differentiation 76
+    
+    XI. Maxima and Minima   93
+    
+    XII. Curvature of Curves   112
+    
+    XIII. Other Useful Dodges   121
+    
+    XIV. On true Compound Interest and the Law of
+    Organic Growth   134
+    
+    XV. How to deal with Sines and Cosines  165
+    
+    XVI. Partial Differentiation  175
+    
+    XVII. Integration     182
+    
+    \DPPageSep{010.png}{x}%
+    
+    XVIII. Integrating as the Reverse of Differentiating  191
+    
+    XIX. On Finding Areas by Integrating  206
+    
+    XX. Dodges, Pitfalls, and Triumphs   226
+    
+    XXI. Finding some Solutions  234
+    
+    XXII. Epilogue and Apologue  249
+    
+    Table of Standard Forms    252
+    
+    Answers to Exercises  254
+    
+    \fi%%%% End of original ToC %%%%
+    \DPPageSep{011.png}{xi}%
+
+
+    \input{chap/chap00.tex}
+
+    \input{chap/chap01.tex}
+    \input{chap/chap02.tex}
+    \input{chap/chap03.tex}
+    \input{chap/chap04.tex}
+    \input{chap/chap05.tex}
+    \input{chap/chap06.tex}
+    \input{chap/chap07.tex}
+    \input{chap/chap08.tex}
+    \input{chap/chap09.tex}
+    \input{chap/chap10.tex}
+    \input{chap/chap11.tex}
+    \input{chap/chap12.tex}
+    \input{chap/chap13.tex}
+    \input{chap/chap14.tex}
+    \input{chap/chap15.tex}
+    \input{chap/chap16.tex}
+    \input{chap/chap17.tex}
+    \input{chap/chap18.tex}
+    \input{chap/chap19.tex}
+    \input{chap/chap20.tex}
+    \input{chap/chap21.tex}
+    
+    \input{chap/chap22.tex}
+\end{document}

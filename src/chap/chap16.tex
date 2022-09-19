@@ -1,0 +1,284 @@
+
+\Chapter{XVI}{Partial Differentiation}
+
+\First{We} sometimes come across quantities that are functions
+of more than one independent variable. Thus,
+we may find a case where $y$ depends on two other
+variable quantities, one of which we will call $u$ and
+the other~$v$. In symbols\Pagelabel{partialdiff}
+\begin{DPalign*}
+y &= f(u, v). \\
+\intertext{\indent Take the simplest concrete case.}
+\lintertext{\indent Let }  y &= u×v. \\
+\intertext{What are we to do? If we were to treat $v$ as a
+constant, and differentiate with respect to~$u$, we
+should get}
+dy_v &= v\, du; \\
+\intertext{or if we treat $u$ as a constant, and differentiate with
+respect to~$v$, we should have:}
+dy_u &= u\, dv.
+\end{DPalign*}
+
+The little letters here put as subscripts are to show
+which quantity has been taken as constant in the
+operation.
+
+Another way of indicating that the differentiation
+has been performed only \emph{partially}, that is, has been
+performed only with respect to \emph{one} of the independent
+\DPPageSep{188.png}{176}%
+variables, is to write the differential coefficients with
+Greek deltas, like~$\partial$, instead of little~$d$. In this way
+\begin{align*}
+\DStrut
+\frac{\partial y}{\partial u} &= v, \\
+\frac{\partial y}{\partial v} &= u.
+\end{align*}
+
+If we put in these values for $v$~and~$u$ respectively,
+we shall have
+\[
+\left.
+\begin{aligned}
+\DStrut
+dy_v &= \frac{\partial y}{\partial u}\, du, \\
+dy_u &= \frac{\partial y}{\partial v}\, dv,
+\end{aligned} \right\}
+\quad\text{which are \emph{partial differentials}.}
+\]
+
+But, if you think of it, you will observe that the
+total variation of~$y$ depends on \emph{both} these things at
+the same time. That is to say, if both are varying,
+the real $dy$ ought to be written
+\[
+dy = \frac{\partial y}{\partial u}\, du + \dfrac{\partial y}{\partial v}\, dv;
+\]
+and this is called a \emph{total differential}. In some books
+it is written $dy = \left(\dfrac{dy}{du}\right)\, du + \left(\dfrac{dy}{dv}\right)\, dv$.
+
+
+\Example{(1).} Find the partial differential coefficients
+of the expression $w = 2ax^2 + 3bxy + 4cy^3$.
+The answers are:
+\[
+\left.
+\begin{aligned}
+\frac{\partial w}{\partial x} &= 4ax + 3by. \\
+\frac{\partial w}{\partial y} &= 3bx + 12cy^2.
+\end{aligned} \right\}
+\]
+\DPPageSep{189.png}{177}%
+
+The first is obtained by supposing $y$ constant, the
+second is obtained by supposing $x$ constant; then
+\[
+dw = (4ax+3by)\, dx + (3bx+12cy^2)\, dy.
+\]
+
+
+\Example{(2).} Let $z = x^y$. Then, treating first $y$
+and then $x$ as constant, we get in the usual way
+\[
+\left.
+\begin{aligned}
+\dfrac{\partial z}{\partial x} &= yx^{y-1}, \\
+\dfrac{\partial z}{\partial y} &= x^y × \log_\epsilon x,
+\end{aligned}\right\}
+\]
+so that $dz = yx^{y-1}\, dx + x^y \log_\epsilon x \, dy$.
+
+
+\Example{(3).} A cone having height $h$ and radius
+of base~$r$\DPchg{,}{} has volume $V=\frac{1}{3} \pi r^2 h$. If its height remains
+constant, while $r$ changes, the ratio of change of
+volume, with respect to radius, is different from ratio
+of change of volume with respect to height which
+would occur if the height were varied and the radius
+kept constant, for
+\[
+\left.
+\begin{aligned}
+\frac{\partial V}{\partial r} &= \dfrac{2\pi}{3} rh, \\
+\frac{\partial V}{\partial h} &= \dfrac{\pi}{3} r^2.
+\end{aligned}\right\}
+\]
+
+The variation when both the radius and the height
+change is given by $dV = \dfrac{2\pi}{3} rh\, dV + \dfrac{\pi}{3} r^2\, dh$.
+
+
+\Example{(4).} \Pagelabel{Example4} In the following example $F$~and~$f$
+denote two arbitrary functions of any form whatsoever.
+For example, they may be sine-functions, or
+exponentials, or mere algebraic functions of the two
+\DPPageSep{190.png}{178}%
+independent variables, $t$~and~$x$. This being understood,
+let us take the expression
+\begin{DPalign*}
+                    y &= F(x+at) + f(x-at), \\
+\lintertext{or, }   y &= F(w) + f(v); \\
+\lintertext{where } w &= x+at,\quad \text{and}\quad v = x-at. \\
+\lintertext{\indent Then } \frac{\partial y}{\partial x}
+                      &= \frac{\partial F(w)}{\partial w} · \frac{\partial w}{\partial x}
+                       + \frac{\partial f(v)}{\partial v} · \frac{\partial v}{\partial x} \\
+                      &= F'(w) · 1 + f'(v) · 1
+\intertext{(where the figure~$1$ is simply the coefficient of~$x$ in
+$w$~and~$v$);}
+\lintertext{and }     \frac{\partial^2 y}{\partial x^2}
+                      &= F''(w) + f''(v). && \\
+\lintertext{\indent Also } \frac{\partial y}{\partial t}
+                      &= \frac{\partial F(w)}{\partial w} · \frac{\partial w}{\partial t}
+                      + \frac{\partial f(v)}{\partial v} · \frac{\partial v}{\partial t} \\
+                      &= F'(w) · a - f'(v) a; \\
+\lintertext{and }     \frac{\partial^2 y}{\partial t^2}
+                      &= F''(w)a^2 + f''(v)a^2; \\
+\lintertext{whence }  \frac{\partial^2 y}{\partial t^2}
+                      &= a^2\, \frac{\partial^2 y}{\partial x^2}.
+\end{DPalign*}
+
+This differential equation is of immense importance
+in mathematical physics.
+
+\Section{Maxima and Minima of Functions of two
+Independent Variables.}
+
+
+\Example{(5).} Let us take up again Exercise~IX.,
+\Pageref{Ex9No4}, No.~4.
+
+Let $x$~and~$y$ be the length of two of the portions of
+the string. The third is $30-(x+y)$, and the area of the
+\DPPageSep{191.png}{179}%
+triangle is $A = \sqrt{s(s-x)(s-y)(s-30+x+y)}$, where
+$s$ is the half perimeter, $15$, so that $A = \sqrt{15P}$, where
+\begin{align*}%[** TN: This display centered in the original]
+P &= (15-x)(15-y)(x+y-15) \\
+  &= xy^2 + x^2y - 15x^2 - 15y^2 - 45xy + 450x + 450y - 3375.
+\end{align*}
+
+Clearly $A$ is maximum when $P$ is maximum.
+\[
+dP = \dfrac{\partial P}{\partial x}\, dx + \dfrac{\partial P}{\partial y}\, dy.
+\]
+For a maximum (clearly it will not be a minimum in
+this case), one must have simultaneously
+\BindMath{%
+\[
+\dfrac{\partial P}{\partial x} = 0 \quad\text{and}\quad
+\dfrac{\partial P}{\partial y} = 0;
+\]
+\begin{DPalign*}
+%[** Can't top-align the equations without enlarging the right brace]
+\lintertext{\raisebox{0.5\baselineskip}{that is,}}
+\left.
+\begin{aligned}
+2xy - 30x + y^2 - 45y + 450 &= 0, \\
+2xy - 30y + x^2 - 45x + 450 &= 0.
+\end{aligned}
+\right\}
+\end{DPalign*}}%
+
+An immediate solution is $x=y$.
+
+If we now introduce this condition in the value
+of~$P$, we find
+\[
+P = (15-x)^2 (2x-15) = 2x^3 - 75x^2 + 900x - 3375.
+\]
+For maximum or minimum, $\dfrac{dP}{dx} = 6x^2 - 150x + 900 = 0$,
+which gives $x=15$ or $x=10$.
+
+Clearly $x=15$ gives minimum area; $x=10$ gives
+the maximum, for $\dfrac{d^2 P}{dx^2} = 12x - 150$, which is $+30$ for
+$x=15$ and $-30$ for $x=10$.
+
+
+\Example{(6).} Find the dimensions of an ordinary
+railway coal truck with rectangular ends, so that,
+for a given volume~$V$ the area of sides and floor
+together is as small as possible.
+\DPPageSep{192.png}{180}%
+
+The truck is a rectangular box open at the top.
+Let $x$ be the length and $y$ be the width; then the
+depth is~$\dfrac{V}{xy}$. The surface area is $S=xy + \dfrac{2V}{x} + \dfrac{2V}{y}$.
+\[
+dS = \frac{\partial S}{\partial x}\, dx
+   + \frac{\partial S}{\partial y}\, dy
+   = \left(y - \frac{2V}{x^2}\right) dx
+   + \left(x - \frac{2V}{y^2}\right) dy.
+\]
+For minimum (clearly it won't be a maximum here),
+\[
+y - \frac{2V}{x^2} = 0,\quad
+x - \frac{2V}{y^2} = 0.
+\]
+
+Here also, an immediate solution is $x = y$, so that
+$S = x^2 + \dfrac{4V}{x}$,\quad $\dfrac{dS}{dx}= 2x - \dfrac{4V}{x^2} =0$ for minimum, and
+\[
+x = \sqrt[3]{2V}.
+\]
+
+
+\Exercises{XV} (See \Pageref[page]{AnsEx:XV} for Answers.)
+\begin{Problems}
+\Item{(1)} Differentiate the expression $\dfrac{x^3}{3} - 2x^3y - 2y^2x + \dfrac{y}{3}$
+with respect to $x$~alone, and with respect to $y$~alone.
+
+\Item{(2)} Find the partial differential coefficients with
+respect to $x$,~$y$ and~$z$, of the expression
+\[
+x^2yz + xy^2z + xyz^2 + x^2y^2z^2.
+\]
+
+\Item{(3)} Let $r^2 = (x-a)^2 + (y-b)^2 + (z-c)^2$.
+
+Find the value of $\dfrac{\partial r}{\partial x} +
+                   \dfrac{\partial r}{\partial y} +
+                   \dfrac{\partial r}{\partial z}$. Also find the value
+of $\dfrac{\partial^2r}{\partial x^2} +
+    \dfrac{\partial^2r}{\partial y^2} +
+    \dfrac{\partial^2r}{\partial z^2}$.
+
+\Item{(4)} Find the total differential of~$y=u^v$.
+\DPPageSep{193.png}{181}%
+
+\Item{(5)} Find the total differential of $y=u^3 \sin v$; of
+$y = (\sin x)^u$; and of $y = \dfrac{\log_\epsilon u}{v}$.
+
+\Item{(6)} Verify that the sum of three quantities $x$,~$y$,~$z$,
+whose product is a constant~$k$, is maximum when
+these three quantities are equal.
+
+\Item{(7)} Find the maximum or minimum of the function
+\[
+u = x + 2xy + y.
+\]
+
+\Item{(8)} The post-office regulations state that no parcel
+is to be of such a size that its length plus its girth
+exceeds $6$~feet. What is the greatest volume that
+can be sent by post (\textit{a})~in the case of a package of
+rectangular cross section; (\textit{b})~in the case of a package
+of circular cross section.
+
+\Item{(9)} Divide $\pi$ into $3$~parts such that the continued
+product of their sines may be a maximum or minimum.
+
+\Item{(10)} Find the maximum or minimum of $u = \dfrac{\epsilon^{x+y}}{xy}$.
+
+\Item{(11)} Find maximum and minimum of
+\[
+u = y + 2x - 2 \log_\epsilon y - \log_\epsilon x.
+\]
+
+\Item{(12)} A telpherage bucket of given capacity has
+the shape of a horizontal isosceles triangular prism
+with the apex underneath, and the opposite face open.
+Find its dimensions in order that the least amount
+of iron sheet may be used in its construction.
+\end{Problems}
+\DPPageSep{194.png}{182}%
+

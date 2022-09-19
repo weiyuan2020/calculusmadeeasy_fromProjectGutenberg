@@ -1,0 +1,25 @@
+\ToCLine {}{Prologue}{Prologue}
+\ToCLine {I.}{To deliver you from the Preliminary Terrors}{chap:I}
+\ToCLine {II.}{On Different Degrees of Smallness}{chap:II}
+\ToCLine {III.}{On Relative Growings}{chap:III}
+\ToCLine {IV.}{Simplest Cases}{chap:IV}
+\ToCLine {V.}{Next Stage. What to do with Constants}{chap:V}
+\ToCLine {VI.}{Sums, Differences, Products and Quotients}{chap:VI}
+\ToCLine {VII.}{Successive Differentiation}{chap:VII}
+\ToCLine {VIII.}{When Time Varies}{chap:VIII}
+\ToCLine {IX.}{Introducing a Useful Dodge}{chap:IX}
+\ToCLine {X.}{Geometrical Meaning of Differentiation}{chap:X}
+\ToCLine {XI.}{Maxima and Minima}{chap:XI}
+\ToCLine {XII.}{Curvature of Curves}{chap:XII}
+\ToCLine {XIII.}{Other Useful Dodges}{chap:XIII}
+\ToCLine {XIV.}{On true Compound Interest and the Law of Organic Growth}{chap:XIV}
+\ToCLine {XV.}{How to deal with Sines and Cosines}{chap:XV}
+\ToCLine {XVI.}{Partial Differentiation}{chap:XVI}
+\ToCLine {XVII.}{Integration}{chap:XVII}
+\ToCLine {XVIII.}{Integrating as the Reverse of Differentiating}{chap:XVIII}
+\ToCLine {XIX.}{On Finding Areas by Integrating}{chap:XIX}
+\ToCLine {XX.}{Dodges, Pitfalls, and Triumphs}{chap:XX}
+\ToCLine {XXI.}{Finding some Solutions}{chap:XXI}
+\ToCLine [\bfseries ]{}{Table of Standard Forms}{Table of Standard Forms}
+\ToCLine {}{Answers to Exercises}{Answers}
+\contentsline {paragraph}{\normalfont (\textit {Examples}, \Pageref {examples3}):}{254}{section*.533}%

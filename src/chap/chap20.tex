@@ -1,0 +1,316 @@
+
+\Chapter{XX}{Dodges, Pitfalls, and Triumphs}
+
+\Paragraph{Dodges.} A great part of the labour of integrating
+things consists in licking them into some shape that
+can be integrated. The books---and by this is meant
+the serious books---on the Integral Calculus are full
+of plans and methods and dodges and artifices for
+this kind of work. The following are a few of
+them.
+
+\Paragraph{Integration by Parts.}\Pagelabel{intparts} This name is given to a
+dodge, the formula for which is
+\[
+\int u\, dx = ux - \int x\, du + C.
+\]
+It is useful in some cases that you can't tackle
+directly, for it shows that if in any case $\ds\int x\, du$ can
+be found, then $\ds\int u\, dx$ can also be found. The formula
+can be deduced as follows. From \Pageref{differprod}, we have,
+\[
+d(ux) = u\, dx + x\, du,
+\]
+which may be written
+\[
+u(dx) = d(ux) - x\, du,
+\]
+which by direct integration gives the above expression.
+\DPPageSep{239.png}{227}%
+
+
+\Examples.
+(1) Find $\ds\int w · \sin w\, dw$.
+
+Write $u = w$, and for $\sin w · dw$ write~$dx$. We shall
+then have $du = dw$, while $\ds\int \sin w · dw = -\cos w = x$.
+
+Putting these into the formula, we get
+\begin{align*}
+\int w · \sin w\, dw &= w(-\cos w) - \int -\cos w\, dw  \\
+                     &=-w \cos w + \sin w + C.
+\end{align*}
+
+(2) Find $\ds\int x \epsilon^x\, dx$.
+%
+\BindMath{\begin{DPalign*}
+\lintertext{\indent Write}
+ u &=  x, & \epsilon^x\, dx&=dv; \\
+\lintertext{then}
+du &= dx, & v &=\epsilon^x,
+\end{DPalign*}
+\begin{DPgather*}
+\lintertext{and}
+\int x\epsilon^x\, dx
+   = x\epsilon^x - \int \epsilon^x\, dx
+      \quad \text{(by the formula)} \\
+   = x \epsilon^x - \epsilon^x = \epsilon^x(x-1) + C.
+\end{DPgather*}}%
+
+(3) Try $\ds\int \cos^2 \theta\, d\theta$.\Pagelabel{moreexamples}
+\begin{DPalign*}
+u &= \cos \theta, &\cos \theta\, d\theta &= dv. \\
+\lintertext{\indent Hence}
+du&= -\sin \theta\, d\theta, & v &=\sin \theta,
+\end{DPalign*}
+\begin{align*}
+\int \cos^2 \theta\, d\theta
+  &= \cos \theta \sin \theta+ \int \sin^2 \theta\, d\theta       \\
+  &= \frac{2 \cos\theta \sin\theta}{2} +\int(1-\cos^2 \theta)\, d\theta  \\
+  &= \frac{\sin 2\theta}{2} + \int d\theta - \int \cos^2 \theta\, d\theta.
+\end{align*}
+\begin{DPalign*}
+\lintertext{\indent Hence}
+2 \int \cos^2 \theta\, d\theta
+  &= \frac{\sin 2\theta}{2} + \theta \\
+\lintertext{and}
+\int \cos^2 \theta\, d\theta
+  &= \frac{\sin 2\theta}{4} + \frac{\theta}{2} + C.
+\end{DPalign*}
+\DPPageSep{240.png}{228}%
+
+(4) Find $\ds\int x^2 \sin x\, dx$.
+%
+\begin{DPalign*}
+\lintertext{\indent Write}
+x^2  &= u, & \sin x\, dx &= dv; \\
+\lintertext{then}
+du &= 2x\, dx, & v &= -\cos x,
+\end{DPalign*}
+\[
+\int x^2 \sin x\, dx = -x^2 \cos x + 2 \int x \cos x\, dx.
+\]
+
+Now find $\ds\int x \cos x\, dx$, integrating by parts (as in
+Example~1 above):
+\[
+\int x \cos x\, dx = x \sin x + \cos x+C.
+\]
+
+Hence
+\begin{align*}
+\int x^2 \sin x\, dx
+  &= -x^2 \cos x + 2x \sin x + 2 \cos x + C' \\
+  &= 2 \left[ x \sin x + \cos x \left(1 - \frac{x^2}{2}\right) \right] +C'.
+\end{align*}
+
+(5) Find $\ds\int \sqrt{1-x^2}\, dx$.
+\begin{DPalign*}
+\lintertext{Write}
+u &= \sqrt{1-x^2},\quad dx=dv;  \\
+\lintertext{then}
+du &= -\frac{x\, dx}{\sqrt{1-x^2}}\quad \text{(see Chap.~IX., \Pageref{chap:IX})}
+\end{DPalign*}
+and $x=v$; so that
+\[
+\int \sqrt{1-x^2}\, dx=x \sqrt{1-x^2} + \int \frac{x^2\, dx}{\sqrt{1-x^2}}.
+\]
+
+Here we may use a little dodge, for we can write
+\[
+\int \sqrt{1-x^2}\, dx
+  = \int \frac{(1-x^2)\, dx}{\sqrt{1-x^2}}
+  = \int \frac{dx}{\sqrt{1-x^2}} - \int \frac{x^2\, dx}{\sqrt{1-x^2}}.
+\]
+
+Adding these two last equations, we get rid of
+$\ds\int \dfrac{x^2\, dx}{\sqrt{1-x^2}}$, and we have
+\[
+2 \int \sqrt{1-x^2}\, dx = x\sqrt{1-x^2} + \int \frac{dx}{\sqrt{1-x^2}}.
+\]
+\DPPageSep{241.png}{229}%
+
+Do you remember meeting $\dfrac {dx}{\sqrt{1-x^2}}$? it is got by
+differentiating $y=\arcsin x$ (see \Pageref{intex3}); hence its integral
+is $\arcsin x$, and so
+\[
+\int \sqrt{1-x^2}\, dx = \frac{x \sqrt{1-x^2}}{2} + \tfrac{1}{2} \arcsin x +C.
+\]
+
+You can try now some exercises by yourself; you
+will find some at the end of this chapter.
+
+\Paragraph{Substitution.} This is the same dodge as explained
+in Chap.~IX., \Pageref{chap:IX}. Let us illustrate its application
+to integration by a few examples.
+
+(1) $\ds\int \sqrt{3+x}\, dx$.
+\begin{DPalign*}
+\lintertext{\indent Let}
+3+x &= u,\quad dx = du; \\
+\lintertext{replace}
+\int u^{\efrac{1}{2}}\, du
+  &= \tfrac{2}{3} u^{\efrac{3}{2}} = \tfrac{2}{3}(3+x)^{\efrac{3}{2}}.
+\end{DPalign*}
+
+(2) $\ds\int \dfrac{dx}{\epsilon^x+\epsilon^{-x}}$.
+\begin{DPgather*}
+\lintertext{\indent Let}
+\epsilon^x = u,\quad \frac{du}{dx} = \epsilon^x,\quad\text{and}\quad
+dx = \frac{du}{\epsilon^x}; \\
+\lintertext{so that}
+\int \frac{dx}{\epsilon^x+\epsilon^{-x}}
+  = \int \frac{du}{\epsilon^x(\epsilon^x+\epsilon^{-x})}
+  = \int \frac{du}{u\left(u + \dfrac{1}{u}\right)}
+  = \int \frac{du}{u^2+1}.
+\end{DPgather*}
+
+$\dfrac{du}{1+u^2}$ is the result of differentiating $\arctan x$.
+
+Hence the integral is $\arctan \epsilon^x$.
+
+(3) $\ds\int \dfrac{dx}{x^2+2x+3} = \ds\int \dfrac{dx}{x^2+2x+1+2} = \ds\int \dfrac{dx}{(x+1)^2+(\sqrt 2)^2}$.
+\DPPageSep{242.png}{230}%
+\begin{DPgather*}
+\lintertext{\indent Let}
+x+1=u,\quad dx=du;
+\end{DPgather*}
+then the integral becomes $\ds\int \dfrac{du}{u^2+(\sqrt2)^2}$; but $\dfrac{du}{u^2+a^2}$ is
+the result of differentiating $u=\dfrac{1}{a} \arctan \dfrac{u}{a}$.
+
+Hence one has finally $\dfrac{1}{\sqrt2} \arctan \dfrac{x+1}{\sqrt 2}$ for the value
+of the given integral.
+
+\emph{Formulæ of Reduction} are special forms applicable
+chiefly to binomial and trigonometrical expressions
+that have to be integrated, and have to be reduced
+into some form of which the integral is known.
+
+\textit{Rationalization}, and \textit{Factorization of Denominator}
+are dodges applicable in special cases, but they do not
+admit of any short or general explanation. Much
+practice is needed to become familiar with these preparatory
+processes.
+
+The following example shows how the process of
+splitting\Pagelabel{partfracs} into partial fractions, which we learned in
+Chap.~XIII., \Pageref{partfracs2}, can be made use of in integration.
+
+Take again $\ds\int \dfrac{dx}{x^2+2x+3}$; if we split $\dfrac{1}{x^2+2x+3}$
+into partial fractions, this becomes (see \Pageref{partfracs3}):
+\[
+\dfrac{1}{2\sqrt{-2}} \left[\int \dfrac{dx}{x+1-\sqrt{-2}} - \int \dfrac{dx}{x+1+\sqrt{-2}} \right]
+\]
+\[
+=\dfrac{1}{2\sqrt{-2}} \log_\epsilon \dfrac{x+1-\sqrt{-2}}{x+1+\sqrt{-2}}.
+\]
+Notice that the same integral can be expressed
+\DPPageSep{243.png}{231}%
+sometimes in more than one way (which are equivalent
+to one another).
+
+\Paragraph{Pitfalls.} A beginner is liable to overlook certain
+points that a practised hand would avoid; such as
+the use of factors that are equivalent to either zero or
+infinity, and the occurrence of indeterminate quantities
+such as $\tfrac{0}{0}$. There is no golden rule that will meet
+every possible case. Nothing but practice and intelligent
+care will avail. An example of a pitfall which
+had to be circumvented arose in Chap.~XVIII., \Pageref{chap:XVIII},
+when we came to the problem of integrating $x^{-1}\, dx$.
+
+\Paragraph{Triumphs.} By triumphs must be understood the
+successes with which the calculus has been applied to
+the solution of problems otherwise intractable. Often
+in the consideration of physical relations one is able
+to build up an expression for the law governing the
+interaction of the parts or of the forces that govern
+them, such expression being naturally in the form of
+a \emph{differential equation}, that is an equation containing
+differential coefficients with or without other algebraic
+quantities. And when such a differential equation
+has been found, one can get no further until it has
+been integrated. Generally it is much easier to state
+the appropriate differential equation than to solve it:---the
+real trouble begins then only when one wants to
+integrate, unless indeed the equation is seen to possess
+some standard form of which the integral is known,
+and then the triumph is easy. The equation which
+results from integrating a differential equation is
+\DPPageSep{244.png}{232}%
+called\footnote
+{This means that the actual result of solving it is called its
+``solution.'' But many mathematicians would say, with Professor
+Forsyth, ``every differential equation \emph{is considered as solved} when
+the value of the dependent variable is expressed as a function of
+the independent variable by means either of known functions, or of
+integrals, whether the integrations in the latter can or cannot be
+expressed in terms of functions already known.''}
+ its ``solution''; and it is quite astonishing
+how in many cases the solution looks as if it had no
+relation to the differential equation of which it is
+the integrated form. The solution often seems as
+different from the original expression as a butterfly
+does from the caterpillar that it was. Who would
+have supposed that such an innocent thing as
+\[
+\dfrac{dy}{dx} = \dfrac{1}{a^2-x^2}
+\]
+could blossom out into
+\[
+y = \dfrac{1}{2a} \log_\epsilon \dfrac{a+x}{a-x} + C?
+\]
+yet the latter is the \textit{solution} of the former.
+
+As a last example, let us work out the above together.
+
+By partial fractions,\Pagelabel{partfracs3}
+\begin{align*}
+\frac{1}{a^2-x^2} &= \frac{1}{2a(a+x)} + \frac{1}{2a(a-x)},  \\
+dy &= \frac {dx}{2a(a+x)}+ \frac{dx}{2a(a-x)},  \\
+y  &= \frac{1}{2a}
+       \left( \int \frac{dx}{a+x}
+            + \int \frac{dx}{a-x} \right) \displaybreak[1] \\
+   &= \frac{1}{2a} \left(\log_\epsilon (a+x) - \log_\epsilon (a-x) \right) \displaybreak[1] \\
+   &= \frac{1}{2a} \log_\epsilon \frac{a+x}{a-x} + C.
+\end{align*}
+\DPPageSep{245.png}{233}%
+% [** TN: Hack removes vertical space, giving a better page break below]
+\indent Not a very difficult metamorphosis!
+
+There are whole treatises, such as Boole's \textit{Differential
+Equations}, devoted to the subject of thus finding
+the ``solutions'' for different original forms.
+
+
+\Exercises{XIX} (See \Pageref{AnsEx:XIX} for Answers.)
+
+\begin{Problems}[2]
+\Item{(1)} Find $\ds\int \sqrt {a^2 - x^2}\, dx$.
+\Item{(2)} Find $\ds\int x \log_\epsilon x\, dx$.
+
+\ResetCols{2}
+\Item{(3)} Find $\ds\int x^a \log_\epsilon x\, dx$.
+\Item{(4)} Find $\ds\int \epsilon^x \cos \epsilon^x\, dx$.
+
+\ResetCols{2}
+\Item{(5)} Find $\ds\int \dfrac{1}{x} \cos (\log_\epsilon x)\, dx$.
+\Item{(6)} Find $\ds\int x^2 \epsilon^x\, dx$.
+
+\ResetCols{2}
+\Item{(7)} Find $\ds\int \dfrac{(\log_\epsilon x)^a}{x}\, dx$.
+\Item{(8)} Find $\ds\int \dfrac{dx}{x \log_\epsilon x}$.
+
+\ResetCols{2}
+\Item{(9)} Find $\ds\int \dfrac{5x+1}{x^2 +x-2}\, dx$.
+\Item{(10)} Find $\ds\int \dfrac{(x^2 -3)\, dx}{x^3 - 7x+6}$.
+
+\ResetCols{2}
+\Item{(11)} Find $\ds\int \dfrac{b\, dx}{x^2 -a^2}$.
+\Item{(12)} Find $\ds\int \dfrac{4x\, dx}{x^4 -1}$.
+
+\ResetCols{2}
+\Item{(13)} Find $\ds\int \dfrac{dx}{1-x^4}$.
+\Item{(14)} Find $\ds\int \dfrac{dx}{x \sqrt {a-bx^2}}$.
+\end{Problems}
+\DPPageSep{246.png}{234}%

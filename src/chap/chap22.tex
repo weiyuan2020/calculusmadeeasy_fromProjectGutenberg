@@ -1,0 +1,1341 @@
+
+\ChapterStar{Epilogue and Apologue}
+
+\First{It} may be confidently assumed that when this
+tractate ``Calculus made Easy'' falls into the hands
+of the professional mathematicians, they will (if not
+too lazy) rise up as one man, and damn it as being a
+thoroughly bad book. Of that there can be, from
+their point of view, no possible manner of doubt
+whatever. It commits several most grievous and
+deplorable errors.
+
+First, it shows how ridiculously easy most of the
+operations of the calculus really are.
+
+Secondly, it gives away so many trade secrets. By
+showing you that \emph{what one fool can do, other fools
+can do also}, it lets you see that these mathematical
+swells, who pride themselves on having mastered such
+an awfully difficult subject as the calculus, have no
+such great reason to be puffed up. They like you to
+think how terribly difficult it is, and don't want that
+superstition to be rudely dissipated.
+
+Thirdly, among the dreadful things they will say
+about ``So Easy'' is this: that there is an utter failure
+on the part of the author to demonstrate with rigid
+\DPPageSep{262.png}{250}%
+and satisfactory completeness the validity of sundry
+methods which he has presented in simple fashion,
+and has even \emph{dared to use} in solving problems! But
+why should he not? You don't forbid the use of
+a watch to every person who does not know how to
+make one? You don't object to the musician playing
+on a violin that he has not himself constructed. You
+don't teach the rules of syntax to children until they
+have already become fluent in the \emph{use} of speech. It
+would be equally absurd to require general rigid
+demonstrations to be expounded to beginners in the
+calculus.
+
+One other thing will the professed mathematicians
+say about this thoroughly bad and vicious book: that
+the reason why it is \emph{so easy} is because the author has
+left out all the things that are really difficult. And
+the ghastly fact about this accusation is that---\emph{it
+is true!} That is, indeed, why the book has been
+written---written for the legion of innocents who have
+hitherto been deterred from acquiring the elements of
+the calculus by the stupid way in which its teaching
+is almost always presented. Any subject can be made
+repulsive by presenting it bristling with difficulties.
+The aim of this book is to enable beginners to learn
+its language, to acquire familiarity with its endearing
+simplicities, and to grasp its powerful methods of
+solving problems, without being compelled to toil
+through the intricate out-of-the-way (and mostly
+irrelevant) mathematical gymnastics so dear to the
+unpractical mathematician.
+\DPPageSep{263.png}{251}%
+
+There are amongst young engineers a number on
+whose ears the adage that \emph{what one fool can do,
+another can}, may fall with a familiar sound. They
+are earnestly requested not to give the author
+away, nor to tell the mathematicians what a fool
+he really is.
+\DPPageSep{264.png}{252}%
+
+
+\AltChapter{Table of Standard Forms}
+
+%[** TN: Manually split onto three pages]
+\vfil
+\begin{center}
+\Pagelabel{stdforms1}
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|c}{\DStrut$\dfrac{dy}{dx}$}
+  & \multicolumn{1}{c}{$\longleftarrow\quad y\quad\longrightarrow$}
+  & $\ds\int y\, dx$ \\
+\hline
+\ColumnHead{Algebraic.} \\
+\DStrut$1$ & $x$     & $\frac{1}{2} x^2 + C$ \\
+\DStrut$0$ & $a$     & $ax + C $             \\
+\DStrut$1$ & $x ± a$ & $\frac{1}{2} x^2 ± ax + C$ \\
+\DStrut$a$ & $ax $   & $\frac{1}{2} ax^2 + C $\\
+\DStrut$2x$ & $x^2$  & $\frac{1}{3} x^3 + C $ \\
+\DStrut$nx^{n-1}$ & $x^n$ &$ \dfrac{1}{n+1} x^{n+1} + C $\\
+\DStrut$-x^{-2} $ & $x^{-1}$ & $\log_\epsilon x + C$ \\
+\DStrut$\dfrac{du}{dx} ± \dfrac{dv}{dx} ± \dfrac{dw}{dx}$
+   & $u ± v ± w$     & $\int u\, dx ± \int v\, dx ± \int w\, dx$ \\
+\DStrut$u\, \dfrac{dv}{dx} + v\, \dfrac{du}{dx}$
+   & $uv$  & No general form known \\
+\DStrut$\dfrac{v\, \dfrac{du}{dx} - u\, \dfrac{dv}{dx}}{v^2}$
+   & $\dfrac{u}{v}$ & No general form known \\
+\DStrut$\dfrac{du}{dx}$ & $u$ & $ux - \int x\, du + C$ \\
+\hline
+\end{tabular}
+\vfil\newpage
+\null\vfil
+%
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|c}{\DStrut$\dfrac{dy}{dx}$}
+  & \multicolumn{1}{c}{$\longleftarrow\quad y\quad\longrightarrow$}
+  & $\ds\int y\, dx$ \\
+\hline
+\ColumnHead{Exponential and Logarithmic.} \\
+$\epsilon^x$ & $\epsilon^x$ & $\epsilon^x + C$ \\
+$x^{-1}$     & $\log_\epsilon x$ & $ x(\log_\epsilon x - 1) + C$ \\
+$0.4343 × x^{-1}$ & $\log_{10} x$ & $0.4343x (\log_\epsilon x - 1) + C$ \\
+\DStrut$a^x \log_\epsilon a$ & $a^x$ & $\dfrac{a^x}{\log_\epsilon a} + C$ \\
+\hline
+%
+\ColumnHead{Trigonometrical.} \\
+$\cos x$  & $\sin x$ & $-\cos x + C $ \\
+$-\sin x$ & $\cos x$ & $\sin x + C $ \\
+$\sec^2 x$& $\tan x$ & $-\log_\epsilon \cos x + C $ \\
+\hline
+%
+\ColumnHead{Circular (Inverse).} \\
+$\dfrac{1}{\sqrt{(1-x^2)}}$ & $\arcsin x$ & $x · \arcsin x + \sqrt{1 - x^2} + C$ \\
+\DStrut$-\dfrac{1}{\sqrt{(1-x^2)}}$ & $\arccos x$ & $x · \arccos x - \sqrt{1 - x^2} + C$ \\
+$\dfrac{1}{1+x^2}$ & $\arctan x$ & $x · \arctan x - \frac{1}{2} \log_\epsilon (1 + x^2) + C$ \\
+\hline
+%\DPPageSep{265.png}{253}%
+\ColumnHead{Hyperbolic.} \\
+$\cosh x   $ & $\sinh x$ & $\cosh x + C$ \\
+$\sinh x   $ & $\cosh x$ & $\sinh x + C$ \\
+$\sech^2 x $ & $\tanh x$ & $\log_\epsilon \cosh x + C $ \\
+\hline
+\end{tabular}
+\vfil\newpage
+%
+%[** TN: Manual coaxing to get this portion to fit page horizontally/vertically]
+\small\Pagelabel{stdforms2}%
+\makebox[0pt][c]{%
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|c}{\DStrut$\dfrac{dy}{dx}$}
+  & \multicolumn{1}{c}{$\longleftarrow\quad y\quad\longrightarrow$}
+  & $\ds\int y\, dx$ \\
+\hline
+\ColumnHead{Miscellaneous.} \\
+\DStrut$-\dfrac{1}{(x + a)^2}$ & $\dfrac{1}{x + a}$ & $ \log_\epsilon (x+a) + C $ \\
+$-\dfrac{x}{(a^2 + x^2)^{\efrac{3}{2}}}$
+  & $\dfrac{1}{\sqrt{a^2 + x^2}}$
+  & $\log_\epsilon (x + \sqrt{a^2 + x^2}) + C $ \\
+\DStrut$\mp \dfrac{b}{(a ± bx)^2}$
+  & $\dfrac{1}{a ± bx}$
+  & $± \dfrac{1}{b} \log_\epsilon (a ± bx) + C $ \\
+$-\dfrac{3a^2x}{(a^2 + x^2)^{\efrac{5}{2}}}$
+  & $\dfrac{a^2}{(a^2 + x^2)^{\efrac{3}{2}}}$
+  & $\dfrac{x}{\sqrt{a^2 + x^2}} + C $ \\
+\DStrut$ a · \cos ax$ & $\sin ax$ & $-\dfrac{1}{a} \cos ax + C $ \\
+$-a · \sin ax$ & $\cos ax$ & $ \dfrac{1}{a} \sin ax + C $ \\
+\DStrut$ a · \sec^2ax$& $\tan ax$ & $-\dfrac{1}{a} \log_\epsilon \cos ax + C $ \\
+$ \sin 2x$ & $\sin^2 x$ & $\dfrac{x}{2} - \dfrac{\sin 2x}{4} + C $ \\
+\DStrut$-\sin 2x$ & $\cos^2 x$ & $\dfrac{x}{2} + \dfrac{\sin 2x}{4} + C $ \\
+$n · \sin^{n-1} x · \cos x$
+  & $ \sin^n x$
+  & \footnotesize$\DStrut\ds-\frac{\cos x}{n} \sin^{n-1} x
+     + \frac{n-1}{n} \int \sin^{n-2} x\, dx + C$ \\
+$-\dfrac{\cos x}{\sin^2 x}$
+  & $\dfrac{1}{\sin x}$
+  & $\log_\epsilon \tan \dfrac{x}{2} + C$ \\
+\DStrut$-\dfrac{\sin 2x}{\sin^4 x}$
+  & $\dfrac{1}{\sin^2 x}$
+  & $ -\cotan x + C$ \\
+$\dfrac{\sin^2 x - \cos^2 x}{\sin^2 x · \cos^2 x}$
+  & $ \dfrac{1}{\sin x · \cos x}$
+  & $ \log_\epsilon \tan x + C $ \\
+\DStrut\parbox{0.2\linewidth}{\raggedright\scriptsize
+  $n · \sin mx · \cos nx + m · \sin nx · \cos mx $}
+  & $\sin mx · \sin nx$
+  & $\frac{1}{2} \cos(m - n)x - \frac{1}{2} \cos(m + n)x + C$ \\
+$ 2a·\sin 2ax$ & $\sin^2 ax$ & $\dfrac{x}{2} - \dfrac{\sin 2ax}{4a} + C $ \\
+\DStrut$-2a·\sin 2ax$ & $\cos^2 ax$ & $\dfrac{x}{2} + \dfrac{\sin 2ax}{4a} + C $ \\
+\hline
+\end{tabular}}%
+\end{center}
+\DPPageSep{266.png}{254}%
+
+
+\AltChapter[Answers to Exercises]{Answers}
+
+\begin{Answers}[3]{I}{(\Pageref{Ex:I}.)}{}
+\Item{(1)} $\dfrac{dy}{dx} = 13x^{12}$.
+\Item{(2)} $\dfrac{dy}{dx} = - \dfrac{3}{2} x^{-\efrac{5}{2}}$.
+\Item{(3)} $\dfrac{dy}{dx} = 2ax^{(2a-1)}$.
+
+\ResetCols{3}
+\Item{(4)} $\dfrac{du}{dt} = 2.4t^{1.4}$.
+\Item{(5)} $\dfrac{dz}{du} = \dfrac{1}{3} u^{-\efrac{2}{3}}$.
+\Item{(6)} $\dfrac{dy}{dx} = -\dfrac{5}{3}x^{\DPtypo{-\efrac{8}{5}}{-\efrac{8}{3}}}$.
+
+\ResetCols{2}
+\Item{(7)} $\dfrac{du}{dx} = -\dfrac{8}{5}x^{-\efrac{13}{5}}$.
+\Item{(8)} $\dfrac{dy}{dx} = 2ax^{a-1}$.
+
+\ResetCols{2}
+\Item{(9)} $\dfrac{dy}{dx} = \dfrac{3}{q} x^{\efrac{3-q}{q}}$.
+\Item{(10)} $\dfrac{dy}{dx} = -\dfrac{m}{n} x^{-\efrac{m+n}{n}}$.
+\end{Answers}
+
+
+\begin{Answers}[3]{II}{(\Pageref{Ex:II}.)}{}
+
+\Item{(1)} $\dfrac{dy}{dx} = 3ax^2$.
+\Item{(2)} $\dfrac{dy}{dx} = 13 × \frac{3}{2}x^{\efrac{1}{2}}$.
+\Item{(3)} $\dfrac{dy}{dx} = 6x^{-\efrac{1}{2}}$.
+
+\ResetCols{3}
+\Item{(4)} $\dfrac{dy}{dx} = \dfrac{1}{2}c^{\efrac{1}{2}} x^{-\efrac{1}{2}}$.
+\Item{(5)} $\dfrac{du}{dz} = \dfrac{an}{c} z^{n-1}$.
+\Item{(6)} $\dfrac{dy}{dt} = 2.36t$.
+
+\ResetCols{1}
+\Item{(7)} $\dfrac{dl_t}{dt} = 0.000012×l_0$.
+
+\Item{(8)} $\dfrac{dC}{dV} = abV^{b-1}$, $0.98$, $3.00$ and $7.47$~candle power per volt respectively.
+
+\Item{(9)} $\begin{aligned}[t]
+  \dfrac{dn}{dD} &= -\dfrac{1}{LD^2} \sqrt{\dfrac{gT}{\pi \sigma}}, &
+  \dfrac{dn}{dL} &= -\dfrac{1}{DL^2} \sqrt{\dfrac{gT}{\pi \sigma}}, \\
+%
+  \dfrac{dn}{d \sigma}
+  &= -\dfrac{1}{2DL} \sqrt{\dfrac{gT}{\pi \sigma^3}}, &
+  \dfrac{dn}{dT} &=  \dfrac{1}{2DL} \sqrt{\dfrac{g}{\pi \sigma T}}.
+\end{aligned}$
+\DPPageSep{267.png}{255}%
+
+\Item{(10)} $\dfrac{\text{Rate of change of~$P$ when $t$~varies}}
+            {\text{Rate of change of~$P$ when $D$~varies}}
+  = - \dfrac{D}{t}$.
+
+\Item{(11)} $2\pi$, $2\pi r$, $\pi l$, $\frac{2}{3}\pi rh$, $8\pi r$, $4\pi r^2$. \hfil
+(12)~$\dfrac{dD}{dT} = \dfrac{0.000012l_t}{\pi}$.
+\end{Answers}
+
+
+\begin{Answers}{III}{(\Pageref{Ex:III}.)}{}
+
+\Item{(1)} (\textit{a}) $1 + x + \dfrac{x^2}{2} + \dfrac{x^3}{6} + \dfrac{x^4}{24} + \ldots$ \qquad
+    (\textit{b}) $2ax + b$. \qquad (\textit{c}) $2x + 2a$.
+
+    (\textit{d}) $3x^2 + 6ax + 3a^2$.
+
+\ResetCols{2}
+\Item{(2)} $\dfrac{dw}{dt} = a - bt$.
+\Item{(3)} $\dfrac{dy}{dx} = 2x$.
+
+\ResetCols{1}
+\Item{(4)} $14110x^4 - 65404x^3 - 2244x^2 + 8192x + 1379$.
+
+\ResetCols{2}
+\Item{(5)} $\dfrac{dx}{dy} = 2y + 8$.
+\Item{(6)} $185.9022654x^2 + 154.36334$.
+
+\ResetCols{2}
+\Item{(7)} $\dfrac{-5}{(3x + 2)^2}$.
+\Item{(8)} $\dfrac{6x^4 + 6x^3 + 9x^2}{(1 + x + 2x^2)^2}$.
+
+\ResetCols{2}
+\Item{(9)} $\dfrac{ad - bc}{(cx + d)^2}$.
+\Item{(10)} $\dfrac{anx^{-n-1} + bnx^{n-1} + 2nx^{-1}}{(x^{-n} + b)^2}$.
+
+\ResetCols{1}
+\Item{(11)} $b + 2ct$.
+
+\Item{(12)} $R_0(a + 2bt)$,\quad $R_0 \left(a + \dfrac{b}{2\sqrt{t}}\right)$,\quad
+  $-\dfrac{R_0(a + 2bt)}{(1 + at + bt^2)^2}$\quad or\quad $\dfrac{R^2 (a + 2bt)}{R_0}$.
+
+\Item{(13)} $1.4340(0.000014t - \DPtypo{0.000828}{0.001024})$,\quad $-0.00117$,\quad $-0.00107$,\quad $-0.00097$.
+
+\Item{(14)} $\dfrac{dE}{dl} = b + \dfrac{k}{i}$,\quad $\dfrac{dE}{di} = -\dfrac{c + kl}{i^2}$.
+\end{Answers}
+
+
+\begin{Answers}[2]{IV}{(\Pageref{Ex:IV}.)}{}
+
+\Item{(1)} $17 + 24x$;\quad $24$.
+\Item{(2)} $\dfrac{x^2 + 2ax - a}{(x + a)^2}$;\quad $\dfrac{2a(a + 1)}{(x + a)^3}$.
+
+\ResetCols{1}
+\Item{(3)} $1 + x + \dfrac{x^2}{1 × 2} + \dfrac{x^3}{1 × 2 × 3}$;\quad $1 + x + \dfrac{x^2}{1 × 2}$.
+
+% [** TN: Freely reformatting subitems]
+\Item{(4)} (\textit{Exercises III.}):
+\begin{itemize}
+\item[(1)] (\textit{a}) $\dfrac{d^2 y}{dx^2} = \dfrac{d^3 y}{dx^3} = 1 + x + \frac{1}{2}x^2 + \frac{1}{6} x^3 + \ldots$. \\
+  (\textit{b}) $2a$, $0$.\hfil
+  (\textit{c}) $2$, $0$.\hfil
+  (\textit{d}) $6x + 6a$, $6$.
+
+\DPPageSep{268.png}{256}%
+\item[(2)] $-b$, $0$.\hfil (3) $2$, $0$.\hfil
+
+\item[(4)] $\begin{gathered}[t]
+    56440x^3 - 196212x^2 - 4488x + 8192. \\
+    169320x^2 - 392424x - 4488.
+    \end{gathered}$
+
+\item[(5)] $2$, $0$. \hfil (6) $371.80453x$, $371.80453$. \hfil
+
+\item[(7)] $\dfrac{30}{(3x + 2)^3}$,\quad $-\dfrac{270}{(3x + 2)^4}$.
+\end{itemize}
+
+\paragraph{\normalfont(\textit{Examples}, \Pageref{examples3}):}
+\begin{itemize}
+\item[(1)] $\dfrac{6a}{b^2} x$,\quad $\dfrac{6a}{b^2}$.\hfil
+(2) $\dfrac{3a \sqrt{b}} {2 \sqrt{x}} - \dfrac{6b \sqrt[3]{a}}{x^3}$,\quad
+$\dfrac{18b \sqrt[3]{a}}{x^4} - \dfrac{3a \sqrt{b}}{4 \sqrt{x^3}}$\DPtypo{}{.}
+
+\Item{(3)}
+$\dfrac{2}{\sqrt[3]{\theta^8}} - \dfrac{1.056}{\sqrt[5]{\theta^{11}}}$,\quad
+$\dfrac{2.3232}{\sqrt[5]{\theta^{16}}} - \dfrac{16}{3 \sqrt[3]{\theta^{11}}}$.
+
+\Item{(4)} $\begin{gathered}[t]
+  810t^4 - 648t^3 + 479.52t^2 - 139.968t + 26.64. \\
+  3240t^3 - 1944t^2 + 959.04t - 139.968.
+  \end{gathered}$
+
+\Item{(5)}  $12x + 2$, $12$.\hfil
+(6) $6x^2 - 9x$,\quad $12x - 9$.\hfil
+
+\Item{(7)}
+$\begin{aligned}[t]
+&\dfrac{3}{4} \left(\dfrac{1}{\sqrt{\theta}} + \dfrac{1}{\sqrt{\theta^5}}\right)
++\dfrac{1}{4} \left(\dfrac{15}{\sqrt{\theta^7}} - \dfrac{1}{\sqrt{\theta^3}}\right). \\
+&\dfrac{3}{8} \left(\dfrac{1}{\sqrt{\theta^5}} - \dfrac{1}{\sqrt{\theta^3}}\right)
+-\dfrac{15}{8}\left(\dfrac{7}{\sqrt{\theta^9}} + \dfrac{1}{\sqrt{\theta^7}}\right).
+\end{aligned}$
+\end{itemize}
+\end{Answers}
+
+
+\begin{Answers}{V}{(\Pageref{Ex:V}.)}{}
+
+\Item{(2)}  64; 147.2; and 0.32 feet per second.
+
+\ResetCols{2}
+\Item{(3)}  $x = a - gt$; $\ddot{x} = -g$.
+
+\Item{(4)}  $45.1$ feet per second.
+
+\ResetCols{1}
+\Item{(5)}  $12.4$ feet per second per second.\quad Yes.
+
+\Item{(6)} Angular velocity ${} = 11.2$ radians per second; angular
+  acceleration ${}= 9.6$ radians per second per second.
+
+\Item{(7)}  $v = 20.4t^2 - 10.8$.\quad $a = 40.8t$.\quad $172.8$~in./sec., $122.4~\text{in./sec}^2$.
+
+\Item{(8)}  $v = \dfrac{1}{30 \sqrt[3]{(t - 125)^2}}$,\quad $a = - \dfrac{1}{45 \sqrt[3]{(t - 125)^5}}$.
+
+\Item{(9)}  $v = 0.8 - \dfrac{8t}{(4 + t^2)^2}$,\quad $a = \dfrac{24t^2 - 32}{(4 + t^2)^3}$,\quad $0.7926$ and $0.00211$.
+
+\Item{(10)}  $n = 2$, $n = 11$.
+\end{Answers}
+\DPPageSep{269.png}{257}%
+
+
+\begin{Answers}[3]{VI}{(\Pageref{Ex:VI}.)}{}
+
+\Item{(1)}  $\dfrac{x}{\sqrt{ x^2 + 1}}$.
+\Item{(2)}  $\dfrac{x}{\sqrt{ x^2 + a^2}}$.
+\Item{(3)}  $- \dfrac{1}{2 \sqrt{(a + x)^3}}$.
+
+\ResetCols{2}
+\Item{(4)}  $\dfrac{ax}{\sqrt{(a - x^2)^3}}$.
+\Item{(5)}  $\dfrac{2a^2 - x^2}{x^3 \sqrt{ x^2 - a^2}}$.
+
+\ResetCols{2}
+\Item{(6)}  $ \dfrac{\frac{3}{2} x^2 \left[ \frac{8}{9} x \left( x^3 + a \right) - \left( x^4 + a \right) \right]}{(x^4 + a)^{\efrac{2}{3}} (x^3 + a)^{\efrac{3}{2}}}$
+\Item{(7)}  $\dfrac{2a \left(x - a \right)}{(x + a)^3}$.
+
+\ResetCols{2}
+\Item{(8)}  $\frac{5}{2} y^3$.
+\Item{(9)}  $\dfrac{1}{(1 - \theta) \sqrt{1 - \theta^2}}$.
+\end{Answers}
+
+
+\begin{Answers}{VII}{(\Pageref{Ex:VII}.)}{}
+
+\Item{(1)}  $\dfrac{dw}{dx} = \dfrac{3x^2 \left( 3 + 3x^3 \right)} {27 \left(\frac{1}{2} x^3 + \frac{1}{4} x^6 \right)^3}$.
+
+\Item{(2)}  $\dfrac{dv}{dx} = - \dfrac{12x}{\sqrt{1 + \sqrt{2} + 3x^2} \left(\sqrt{3} + 4 \sqrt{1 + \sqrt{2} + 3x^2}\right)^2}$.
+
+\Item{(3)}  $\dfrac{du}{dx} = - \dfrac{x^2 \left(\sqrt{3} + x^3 \right)} {\sqrt{ \left[ 1 + \left( 1 + \dfrac{x^3}{\sqrt{3}} \right) ^2 \right]^3}} $
+\end{Answers}
+
+
+\begin{Answers}{VIII}{(\Pageref{Ex:VIII}.)}{}
+
+\Item{(2)}  $1.44$.
+
+\Item{(4)}  $\dfrac{dy}{dx} = 3x^2 + 3$; and the numerical values are:
+     $3$,~$3 \frac{3}{4}$, $6$,~and~$15$.
+
+\Item{(5)}  $ ± \sqrt{2}$.
+
+\Item{(6)}  $ \dfrac{dy}{dx} = - \dfrac{4}{9} \dfrac{x}{y}$. Slope is zero where $x = 0$; and is $\mp \dfrac{1}{3 \sqrt{2}}$ where $x = 1$.
+
+\Item{(7)}  $m = 4$, $n = -3$.
+
+\Item{(8)}  Intersections at $x = 1$, $x = -3$. Angles $153°\;26'$, $2°\;28'$.
+
+\Item{(9)}  Intersection at $x = 3.57$, $y = 3.50$. Angle $16°\;16'$.
+
+\Item{(10)}  $x = \frac{1}{3}$, $y = 2 \frac{1}{3}$, $b = -\frac{5}{3}$.
+\end{Answers}
+\DPPageSep{270.png}{258}%
+
+
+\begin{Answers}{IX}{(\Pageref{Ex:IX}.)}{}
+
+\Item{(1)}  Min.: $x = 0$, $y = 0$; max.: $x = -2$, $y = -4$.
+
+\ResetCols{2}
+\Item{(2)}  $x = a$.
+
+\Item{(4)}  $25 \sqrt{3}$ square inches.
+
+\ResetCols{1}
+\Item{(5)}  $\dfrac{dy}{dx} = - \dfrac{10}{x^2} + \dfrac{10}{(8 - x)^2}$; $x = 4$; $y = 5$.
+
+\Item{(6)}  Max.\ for $x = -1$; min.\ for $x = 1$.
+
+\Item{(7)}  Join the middle points of the four sides.
+
+\Item{(8)}  $r = \frac{2}{3} R$, $r = \dfrac{R}{2}$, no max.
+
+\Item{(9)}  $r = R \sqrt{\dfrac{2}{3}}$, $r = \dfrac{R}{\sqrt{2}}$, $r = 0.8506R$.
+
+\Item{(10)}  At the rate of $\dfrac{8}{r}$ square feet per second.
+
+\ResetCols{2}
+\Item{(11)}  $r = \dfrac{R \sqrt{8}}{3}$.
+\Item{(12)}  $n = \sqrt{\dfrac{NR}{r}}$.
+\end{Answers}
+
+
+\begin{Answers}{X}{(\Pageref{Ex:X}.)}{}
+
+\Item{(1)}  Max.: $x = -2.19$, $y = 24.19$; min.:, $x = 1.52$, $y = -1.38$.
+
+\Item{(2)}  $\dfrac{dy}{dx} = \dfrac{b}{a} - 2cx$; $\dfrac{d^2 y}{dx^2} = -2c$; $x = \dfrac{b}{2ac}$ (\emph{a maximum}).
+
+\Item{(3)}  (\textit{a}) One maximum and two minima.  \\
+(\textit{b}) One maximum. ($x = 0$; other points unreal.)
+
+\ResetCols{2}
+\Item{(4)}  Min.: $x = 1.71$, $y = 6.14$.
+
+\Item{(5)}  Max: $x = -.5$, $y = 4$.
+
+\ResetCols{1}
+\Item{(6)}  Max.: $x = 1.414$, $y = 1.7675$.  \\
+Min.: $x = -1.414$, $y = 1.7675$.
+
+\Item{(7)}  Max.: $x = -3.565$, $y = 2.12$.  \\
+Min.: $x = +3.565$, $y = 7.88$.
+
+\ResetCols{2}
+\Item{(8)}  $0.4N$, $0.6N$.
+
+\Item{(9)}  $x = \sqrt{\dfrac{a}{c}}$.
+
+\ResetCols{1}
+\Item{(10)}  Speed $8.66$ nautical miles per hour. Time taken $115.47$~hours. \\
+Minimum cost £$112$.~$12$\textit{s}.
+\DPPageSep{271.png}{259}%
+
+\Item{(11)}  Max.\ and min.\ for $x = 7.5$, $y = ±5.414$. (See example
+no.~10, \Pageref{Example10}.)
+
+\Item{(12)}  Min.: $x = \frac{1}{2}$, $y= 0.25$; max.: $x = - \frac{1}{3}$, $y= 1.408$.
+\end{Answers}
+
+%[** TN: Text block-dependent page break]
+\begin{Answers}[3]{XI}{(\Pageref{Ex:XI}.)}{\newpage}
+
+\Item{(1)}  $\dfrac{2}{ x - 3} + \dfrac{1}{ x + 4}$.
+
+\Item{(2)}  $\dfrac{1}{ x - 1} + \dfrac{2}{ x - 2}$.
+
+\Item{(3)}  $\dfrac{2}{ x - 3} + \dfrac{1}{ x + 4}$.
+
+\ResetCols{2}
+\Item{(4)}  $\dfrac{5}{ x - 4} - \dfrac{4}{ x - 3}$.
+
+\Item{(5)}  $\dfrac{19}{13(2x + 3)} - \dfrac{22}{13(3x - 2)}$.
+
+\ResetCols{1}
+\Item{(6)}  $\dfrac{2}{ x - 2} + \dfrac{4}{ x - 3} - \dfrac{5}{ x - 4}$.
+
+\Item{(7)}  $\dfrac{1}{6(x - 1)} + \dfrac{11}{15(x + 2)} + \dfrac{1}{10(x - 3)}$.
+
+\Item{(8)}  $\dfrac{7}{9(3x + 1)} + \dfrac{71}{63(3x - 2)} - \dfrac{5}{7(2x + 1)}$.
+
+\ResetCols{2}
+\Item{(9)}  $\dfrac{1}{3(x - 1)} + \dfrac{2x + 1}{3(x^2 + x + 1)}$.
+
+\Item{(10)} $x + \dfrac{2}{3(x + 1)} + \dfrac{1 - 2x}{3(x^2 - x + 1)}$.
+
+\ResetCols{2}
+\Item{(11)} $\dfrac{3}{(x + 1)} + \dfrac{2x + 1}{x^2 + x + 1}$.
+
+\Item{(12)} $\dfrac{1}{ x - 1} - \dfrac{1}{ x - 2} + \dfrac{2}{(x - 2)^2}$.
+
+\ResetCols{1}
+\Item{(13)} $\dfrac{1}{4(x - 1)} - \dfrac{1}{4(x + 1)} + \dfrac{1}{2(x + 1)^2}$.
+
+\Item{(14)} $\dfrac{4}{9(x - 1)} - \dfrac{4}{9(x + 2)} - \dfrac{1}{3(x + 2)^2}$.
+
+\Item{(15)} $\dfrac{1}{ x + 2} - \dfrac{x - 1}{ x^2 + x + 1} - \dfrac{1}{(x^2 + x + 1)^2}$.
+
+\Item{(16)} $\dfrac{5}{ x + 4} -\dfrac{32}{(x + 4)^2} + \dfrac{36}{(x + 4)^3}$.
+
+\Item{(17)} $\dfrac{7}{9(3x - 2)^2} + \dfrac{55}{9(3x - 2)^3} + \dfrac{73}{9(3x - 2)^4}$.
+
+\Item{(18)} $\dfrac{1}{6(x - 2)} + \dfrac{1}{3(x - 2)^2} - \dfrac{x}{6(x^2 + 2x + 4)}$.
+\end{Answers}
+\DPPageSep{272.png}{260}%
+
+
+\begin{Answers}[3]{XII}{(\Pageref{Ex:XII}.)}{}
+
+\Item{(1)}  $ab(\epsilon^{ax} + \epsilon^{-ax})$.
+
+\Item{(2)}  $2at + \dfrac{2}{t}$.
+
+\Item{(3)}  $\log_\epsilon n$.
+
+\ResetCols{3}
+\Item{(5)}  $npv^{n-1}$.
+
+\Item{(6)}  $\dfrac{n}{x}$.
+
+\Item{(7)}  $\dfrac{3\epsilon^{- \frac{x}{x-1}}}{(x - 1)^2}$.
+
+\ResetCols{2}
+\Item{(8)}  $6x \epsilon^{-5x} - 5(3x^2 + 1)\epsilon^{-5x}$.
+
+\Item{(9)}  $\dfrac{ax^{a-1}}{x^a + a}$.
+
+\ResetCols{1}
+\Item{(10)}  $\left(\dfrac{6x}{3x^2-1} + \dfrac{1}{2\left(\sqrt x + x\right)}\right) \left(3x^2-1\right)\left(\sqrt x + 1\right)$.
+
+\Item{(11)}  $\dfrac{1 - \log_\epsilon \left(x + 3\right)}{\left(x + 3\right)^2}$.
+
+\ResetCols{2}
+\Item{(12)}  $a^x\left(ax^{a-1} + x^a \log_\epsilon a\right)$.
+
+\Item{(14)}  Min.: $y = 0.7$ for $x = 0.694$.
+
+\ResetCols{2}
+\Item{(15)}  $\dfrac{1 + x}{x}$.
+
+\Item{(16)}  $\dfrac{3}{x} (\log_\epsilon ax)^2$.
+\end{Answers}
+
+
+\begin{Answers}{XIII}{(\Pageref{Ex:XIII}.)}{}
+
+\Item{(1)}  Let $\dfrac{t}{T} = x$ ($\therefore t = 8x$), and use the Table on \Pageref[page]{littletable}.
+
+\Item{(2)}  $T = 34.627$; $159.46$ minutes.
+
+\Item{(3)}  Take $2t = x$; and use the Table on \Pageref[page]{littletable}.
+
+\Item{(5)}  (\textit{a}) $x^x \left(1 + \log_\epsilon x\right)$;\quad
+(\textit{b}) $2x(\epsilon^x)^x$;\quad
+(\textit{c}) $\epsilon^{x^x} × x^x \left(1 + \log_\epsilon x\right)$.
+
+\ResetCols{2}
+\Item{(6)}  $0.14$ second.
+
+\Item{(7)}  (\textit{a}) $1.642$;\quad (\textit{b}) $15.58$.
+
+\ResetCols{1}
+\Item{(8)}  $\mu = 0.00037$, $31^m \frac{1}{4}$. %[** Time units]
+
+\Item{(9)}  $i$ is $63.4$\% of~$i_0$, $220$~kilometres.
+
+\Item{(10)}  $0.133$, $0.145$, $0.155$, mean $0.144$; $-10.2$\%, $-0.9$\%, $+77.2$\%.
+
+\ResetCols{2}
+\Item{(11)}  Min.\ for $x = \dfrac{1}{\epsilon}$.
+
+\Item{(12)}  Max.\ for $x = \epsilon$.
+
+\ResetCols{1}
+\Item{(13)}  Min.\ for $x = \log_\epsilon a$.
+\end{Answers}
+\DPPageSep{273.png}{261}%
+
+
+\begin{Answers}{XIV}{(\Pageref{Ex:XIV}.)}{}
+
+\Item{(1)} (i) $\dfrac{dy}{d\theta} = A \cos \left( \theta - \dfrac{\pi}{2} \right)$;
+
+(ii) $\dfrac{dy}{d\theta} = 2\sin\theta \cos\theta = \sin2\theta$ and $\dfrac{dy}{d\theta} = 2\cos2\theta$;
+
+(iii) $\dfrac{dy}{d\theta} = 3\sin^2 \theta \cos\theta$ and $\dfrac{dy}{d\theta} = 3\cos3\theta$.
+
+\ResetCols{2}
+\Item{(2)}  $\theta = 45°$ or $\dfrac{\pi}{4}$ radians.
+
+\Item{(3)}  $\dfrac{dy}{dt} = -n \sin 2\pi nt$.
+
+\ResetCols{2}
+\Item{(4)}  $a^x \log_\epsilon a \cos a^x$.
+
+\Item{(5)}  $\dfrac{\cos x}{\sin x} = \cotan x$
+
+\ResetCols{1}
+\Item{(6)}  $18.2 \cos \left(x + 26° \right)$.
+
+\Item{(7)} {\loosen The slope is $\dfrac{dy}{d\theta} = 100\cos\left(\theta - 15° \right)$, which is a maximum
+ when $(\theta -15°) = 0$, or $\theta = 15°$; the value of the slope
+ being then ${}= 100$. When $\theta = 75°$ the slope is
+ $100\cos(75°  - 15°) = 100\cos 60° = 100 × \frac{1}{2} = 50$.}
+
+\Item{(8)} $\begin{aligned}[t]
+  \cos\theta \sin2\theta + 2\cos2\theta \sin\theta
+  &= 2\sin\theta\left(\cos^2 \theta + \cos2\theta\right) \\
+  &= 2\sin\theta\left(3\cos^2 \theta - 1\right).
+  \end{aligned}$
+
+\Item{(9)} $amn\theta^{n-1} \tan^{m-1}\left(\theta^n\right)\sec^2 \theta^n$.
+
+\Item{(10)} $\epsilon^x \left(\sin^2 x + \sin2x\right)$;\quad $\epsilon^x \left(\sin^2 x + 2\sin2x + 2\cos2x\right)$.
+
+\Item{(11)} $\left(i\right) \dfrac{dy}{dx} = \dfrac{ab}{\left(x + b\right)^2}$;\quad
+(ii)~$\dfrac{a}{b} \epsilon^{-\efrac{x}{b}}$;\quad
+(iii)~$\dfrac{1}{90}° × \dfrac{ab}{\left(b^2 + x^2\right)}$.
+
+\Item{(12)} (i) $\dfrac{dy}{dx} = \sec x \tan x$;
+
+(ii) $\dfrac{dy}{dx} = - \dfrac{1}{\sqrt{ 1 - x^2}}$;
+
+(iii) $\dfrac{dy}{dx} = \dfrac{1}{ 1 + x^2}$;
+
+(iv) $\dfrac{dy}{dx} = \dfrac{1}{x \sqrt{ x^2 - 1}}$;
+
+(v) $\dfrac{dy}{dx} = \dfrac{\sqrt{ 3\sec x} \left(3\sec^2 x - 1\right)}{2}$.
+
+\Item{(13)} $\dfrac{dy}{d\theta} = 4.6\left(2\theta + 3\right)^{1.3} \cos\left(2\theta + 3\right)^{2.3}$.
+\DPPageSep{274.png}{262}%
+
+\Item{(14)}  $\dfrac{dy}{d\theta} = 3\theta^2 + 3\cos \left( \theta + 3 \right) - \log_\epsilon 3 \left( \cos\theta × 3^{\sin\theta} + 3\theta \right)$.
+
+\Item{(15)}  $\theta = \cot\theta; \theta = ±0.86$; is max.~for $+\theta$, min.~for $-\theta$.
+\end{Answers}
+
+
+\begin{Answers}{XV}{(\Pageref{Ex:XV}.)}{}
+
+\Item{(1)}  $x^3 - 6x^2 y - 2y^2;\quad \frac{1}{3} - 2x^3 - 4xy$.
+
+\Item{(2)}  $2xyz + y^2 z + z^2 y + 2xy^2 z^2$;\\
+     $2xyz + x^2 z + xz^2 + 2x^2 yz^2$;\\
+     $2xyz + x^2 y + xy^2 + 2x^2 y^2 z$.
+
+\Item{(3)}  $\dfrac{1}{r} \{ \left(x - a\right) + \left( y - b \right) + \left( z - c \right) \} = \dfrac{ \left( x + y + z \right) - \left( a + b + c \right) }{r}$; $\dfrac{3}{r}$.
+
+\Item{(4)}  $dy = vu^{v-1}\, du + u^v \log_\epsilon u\, dv$.
+
+\Item{(5)}  $dy = 3\sin v u^2\, du + u^3 \cos v\, dv$,\\
+     $dy = u \sin x^{u-1} \cos x\, dx + (\sin x)^u \log_\epsilon \sin x du$,\\
+     $dy = \dfrac{1}{v}\, \dfrac{1}{u}\, du - \log_\epsilon u \dfrac{1}{v^2}\, dv$.
+
+\Item{(7)}  Minimum for $x = y = -\frac{1}{2}$.
+
+\Item{(8)}  (\textit{a}) Length $2$~feet, width = depth = $1$~foot, vol.\ = $2$~cubic
+ feet.
+
+ (\textit{b}) Radius = $\dfrac{2}{\pi}$ feet = $7.46$~in., length = $2$~feet, vol.\ = $2.54$.
+
+\Item{(9)}   All three parts equal; the product is maximum.
+
+\Item{(10)}  Minimum for $x = y = 1$.
+
+\Item{(11)}  Min.: $x = \frac{1}{2}$ and $y = 2$.
+
+\Item{(12)}  Angle at apex $= 90°$; equal sides = length = $\sqrt[3]{2V}$.
+\end{Answers}
+
+%[** TN: Text block-dependent page break]
+\begin{Answers}[3]{XVI}{(\Pageref{Ex:XVI}.)}{\newpage}
+
+\Item{(1)}  $1\frac{1}{3}$.
+
+\Item{(2)}  $0.6344$.
+
+\Item{(3)}  $0.2624$.
+
+\ResetCols{1}
+\Item{(4)}  (\textit{a}) $y = \frac{1}{8} x^2 + C$;\quad
+     (\textit{b}) $y = \sin x + C$.
+
+\Item{(5)}  $y = x^2 + 3x + C$.
+\end{Answers}
+\DPPageSep{275.png}{263}%
+
+
+\begin{Answers}[3]{XVII}{(\Pageref{Ex:XVII}.)}{}
+
+\Item{(1)} $\dfrac{4\sqrt{a} x^{\efrac{3}{2}}}{3} + C$.
+
+\Item{(2)} $-\dfrac{1}{x^3} + C$.
+
+\Item{(3)} $\dfrac{x^4}{4a} + C$.
+
+\ResetCols{2}
+\Item{(4)} $\tfrac{1}{3} x^3 + ax + C$.
+
+\Item{(5)} $-2x^{-\efrac{5}{2}} + C$.
+
+\ResetCols{2}
+\Item{(6)} $x^4 + x^3 + x^2 + x + C$.
+
+\Item{(7)} $\dfrac{ax^2}{4} + \dfrac{bx^3}{9} + \dfrac{cx^4}{16} + C$.
+
+\ResetCols{1}
+\Item{(8)} {\loosen $\dfrac{x^2 + a}{x + a} = x - a + \dfrac{a^2 + a}{x + a}$ by division. Therefore the answer
+is $\dfrac{x^2}{2} - ax + (a^2 + a)\log_\epsilon (x + a) + C$.}
+  (See pages \pageref{intex1} and~\pageref{intex2}.)
+
+\ResetCols{2}
+\Item{(9)} $\dfrac{x^4}{4} + 3x^3 + \dfrac{27}{2} x^2 + 27x + C$.
+
+\Item{(10)} $\dfrac{x^3}{3} + \dfrac{2 - a}{2} x^2 - 2ax + C$.
+
+\ResetCols{2}
+\Item{(11)} $a^2(2x^{\efrac{3}{2}} + \tfrac{9}{4} x^{\efrac{4}{3}}) + C$.
+
+\Item{(12)} $-\tfrac{1}{3} \cos\theta - \tfrac{1}{6} \theta + C$.
+
+\ResetCols{2}
+\Item{(13)} $\dfrac{\theta}{2} + \dfrac{\sin 2a\theta}{4a} + C$.
+
+\Item{(14)} $\dfrac{\theta}{2} - \dfrac{\sin 2\theta}{4} + C$.
+
+\ResetCols{2}
+\Item{(15)} $\dfrac{\theta}{2} - \dfrac{\sin 2a\theta}{4a} + C$.
+
+\Item{(16)} $\tfrac{1}{3} \epsilon^{3x}$. % [F1: +C?]
+
+\ResetCols{2}
+\Item{(17)} $\log(1 + x) + C$.
+
+\Item{(18)} $-\log_\epsilon (1 - x) + C$.
+\end{Answers}
+
+
+\begin{Answers}{XVIII}{(\Pageref{Ex:XVIII}.)}{}
+
+\Item{(1)} $\text{Area} = 60$; $\text{mean ordinate} = 10$.
+
+\Item{(2)} $\text{Area} = \frac{2}{3}$ of $a × 2a \sqrt{a}$.
+
+\Item{(3)} $\text{Area} = 2$; $\text{mean ordinate} = \dfrac{2}{\pi} = 0.637$.
+
+\Item{(4)} $\text{Area} = 1.57$; $\text{mean ordinate} = 0.5$.
+
+\ResetCols{2}
+\Item{(5)} $0.572$, $0.0476$.
+
+\Item{(6)} $\text{Volume} = \pi r^2 \dfrac{h}{3}$.
+
+\ResetCols{2}
+\Item{(7)} $1.25$.
+
+\Item{(8)} $79.4$.
+
+\ResetCols{1}
+\Item{(9)} $\text{Volume} = 4.9348$; $\text{area of surface} = 12.57$ (from $0$ to~$\pi$).
+
+\Item{(10)} $a\log_\epsilon a$,\quad $\dfrac{a}{a - 1} \log_\epsilon a$.
+
+\Item{(12)} $\text{Arithmetical mean} = 9.5$; $\text{quadratic mean} = 10.85$.
+\DPPageSep{276.png}{264}%
+
+\Item{(13)} $\text{Quadratic mean} = \dfrac{1}{\sqrt{2}} \sqrt{A_1^2 + A_3^2}$; $\text{arithmetical mean} = 0$.
+
+The first involves a somewhat difficult integral, and may be
+stated thus: By definition the quadratic mean will be
+\[
+\sqrt{\dfrac{1}{2\pi} \int_0^{2\pi} (A_1 \sin x + A_3 \sin 3x)^2\, dx}. %[** TN: Moved period out of radicand]
+\]
+Now the integration indicated by
+\[
+\int (A_1^2 \sin^2 x + 2A_1 A_3 \sin x \sin 3x + A_3^2 \sin^2 3x)\, dx
+\]
+is more readily obtained if for $\sin^2 x$ we write
+\[
+\dfrac{1 - \cos 2x}{2}.
+\]
+For $2\sin x \sin 3x$ we write $\cos 2x - \cos 4x$; and, for $\sin^2 3x$,
+\[
+\dfrac{1 - \cos 6x}{2}.
+\]
+
+Making these substitutions, and integrating, we get (see
+\Pageref{cosax})
+\[
+\dfrac{A_1^2}{2} \left( x - \dfrac{\sin 2x}{2} \right)
+ + A_1 A_3 \left( \dfrac{\sin 2x}{2} - \dfrac{\sin 4x}{4} \right)
+ + \dfrac{A_3^2}{2} \left( x - \dfrac{\sin 6x}{6} \right).
+\]
+
+At the lower limit the substitution of $0$ for~$x$ causes all
+this to vanish, whilst at the upper limit the substitution
+of $2\pi$ for~$x$ gives $A_1^2 \pi + A_3^2 \pi$. And hence the
+answer follows.
+
+\Item{(14)} Area is $62.6$~square units. Mean ordinate is $10.42$.
+
+\Item{(16)} $436.3$. (This solid is pear shaped.)
+\end{Answers}
+
+
+\begin{Answers}[2]{XIX}{(\Pageref{Ex:XIX}.)}{}
+
+\Item{(1)} $\dfrac{x\sqrt{a^2 - x^2}}{2} + \dfrac{a^2}{2} \sin^{-1} \dfrac{x}{a} + C$.
+
+\Item{(2)} $\dfrac{x^2}{2}(\log_\epsilon x - \tfrac{1}{2}) + C$.
+
+\ResetCols{2}
+\Item{(3)} $\dfrac{x^{a+1}}{a + 1} \left(\log_\epsilon x - \dfrac{1}{a + 1}\right) + C$.
+
+\Item{(4)} $\sin \DPtypo{e}{\epsilon}^x + C$.
+
+\ResetCols{2}
+\Item{(5)} $\sin(\log_\epsilon x) + C$.
+
+\Item{(6)} $\DPtypo{e}{\epsilon}^x (x^2 - 2x + 2) + C$.
+
+\ResetCols{2}
+\Item{(7)} $\dfrac{1}{a + 1} (\log_\epsilon x)^{a+1} + C$.
+\DPPageSep{277.png}{265}%
+
+\Item{(8)} $\log_\epsilon(\log_\epsilon x) + C$.
+
+\ResetCols{1}
+\Item{(9)} $2\log_\epsilon(x - 1) + 3\log_\epsilon(x + 2) + C$.
+
+\Item{(10)} $\frac{1}{2} \log_\epsilon(x - 1) + \frac{1}{5} \log_\epsilon(x - 2) + \frac{3}{10} \log_\epsilon(x + 3) + C$.
+
+\ResetCols{2}
+\Item{(11)} $\dfrac{b}{2a} \log_\epsilon \dfrac{x - a}{x + a} + C$.
+
+\Item{(12)} $\log_\epsilon \dfrac{x^2 - 1}{x^2 + 1} + C$.
+
+\ResetCols{1}
+\Item{(13)} $\frac{1}{4} \log_\epsilon \dfrac{1 + x}{1 - x} + \frac{1}{2} \arctan x + C$.
+
+\Item{(14)} $\dfrac{1}{\sqrt{a}} \log_\epsilon \dfrac{\sqrt{a} - \sqrt{a - bx^2}}{x\sqrt{a}}$.\quad (Let $\dfrac{1}{x} = v$; then, in the result,
+let $\sqrt{v^2 - \dfrac{b}{a}} = v - u$.) %[** TN: Large () in the original]
+
+You had better differentiate now the answer and work
+back to the given expression as a check.
+\end{Answers}
+
+Every earnest student is exhorted to manufacture more
+examples for himself at every stage, so as to test his powers.
+When integrating he can always test his answer by differentiating
+it, to see whether he gets back the expression from
+which he started.
+
+There are lots of books which give examples for practice.
+It will suffice here to name two: R.~G.~Blaine's \textit{The Calculus
+and its Applications}, and F.~M.~Saxelby's \textit{A Course in Practical
+Mathematics}.
+
+\vfill
+\begin{center}
+  \tiny GLASGOW: PRINTED AT THE UNIVERSITY PRESS BY ROBERT MACLEHOSE AND CO. LTD.
+\end{center}
+\DPPageSep{278.png}{266}%
+% [Blank Page]
+\DPPageSep{279.png}{267}%
+
+
+% [** TN: Macro prints the text below]
+%A SELECTION OF
+%Mathematical Works
+\Catalogue
+
+\Book{\Title{An Introduction to the Calculus.}  Based on
+Graphical Methods. By Prof.\ \Author{G.~A.~Gibson}, M.A., LL.D\@.
+3s.~6d.}
+
+\Book{\Title{An Elementary Treatise on the Calculus.} With
+Illustrations from Geometry, Mechanics, and Physics.
+By Prof.\ \Author{G.~A.~Gibson}, M.A., LL.D\@. 7s.~6d.}
+
+\Book{\Title{Differential Calculus for Beginners.}  By
+\Author{J.~Edwards}, M.A\@. 4s.~6d.}
+
+\Book{\Title{Integral Calculus for Beginners.} With an Introduction
+to the Study of Differential Equations. By
+\Author{Joseph Edwards}, M.A\@. 4s.~6d.}
+
+\Book{\Title{Calculus Made Easy.} Being a very-simplest
+Introduction to those beautiful Methods of Reckoning
+which are generally called by the terrifying names of the
+Differential Calculus and the Integral Calculus. By \Author{F.~R.~S\@.}
+2s.~net. New Edition, with many Examples.}
+
+\Book{\Title{A First Course in the Differential and Integral
+Calculus.} By Prof.\ \Author{W.~F.~Osgood}, Ph.D\@. 8s.~6d.\ net.}
+
+\Book{\Title{Practical Integration for the use of Engineers,
+etc.} By \Author{A.~S.~Percival}, M.A\@. 2s.~6d.\ net.}
+
+\Book{\Title{Differential Calculus.} With Applications and
+numerous Examples. An Elementary Treatise by \Author{Joseph
+Edwards}, M.A\@. 14s.}
+
+\Book{\Title{Differential and Integral Calculus for Technical
+Schools and Colleges.} By \Author{P.~A.~Lambert}, M.A\@. 7s.~6d.}
+
+\Book{\Title{Differential and Integral Calculus. With Applications.}
+By Sir \Author{A.~G.~Greenhill}, F.R.S\@. 10s.~6d.}
+%\vfill
+%\begin{center}LONDON: MACMILLAN AND CO., LTD.\end{center}
+\DPPageSep{280.png}{268}%
+
+\Book{\Title{A Treatise on the Integral Calculus and its
+Applications.} By \Author{I.~Todhunter}, F.R.S\@. 10s.~6d. Key.
+By \Author{H.~St.~J.~Hunter}, M.A\@. 10s.~6d.}
+
+\Book{\Title{A Treatise on the Differential Calculus and the
+Elements of the Integral Calculus.} With numerous Examples.
+By \Author{I.~Todhunter}, F.R.S\@. 10s.~6d. Key. By
+\Author{H.~St.~J.~Hunter}, M.A\@. 10s.~6d.}
+
+\Book{\Title{Ordinary Differential Equations. An Elementary
+Text-book.} By \Author{James Morris Page}, Ph.D\@. 6s.~6d.}
+
+\Book{\Title{An Introduction to the Modern Theory of
+Equations.} By Prof.\ \Author{F.~Cajori}, Ph.D\@. 7s.~6d.\ net.}
+
+\Book{\Title{A Treatise on Differential Equations.} By
+\Author{Andrew Russell Forsyth}, Sc.D., LL.D\@. Fourth
+Edition. 14s.\ net.}
+
+\Book{\Title{A Short Course on Differential Equations.} By
+Prof.\ \Author{Donald~F. Campbell}, Ph.D\@. 4s.\ net.}
+
+\Book{\Title{A Manual of Quaternions.} By \Author{C.~J.~Joly},
+M.A., D.Sc., F.R.S\@. 10s.\ net.}
+
+\Book{\Title{The Theory of Determinants in the Historical
+Order of Development.} Vol.~I\@. Part~I. General Determinants,
+up to~1841. Part~II. Special Determinants, up
+to~1841. 17s.\ net. Vol.~II\@. The Period 1841 to~1860. 17s.\
+net. By \Author{T.~Muir}, M.A., LL.D., F.R.S.}
+
+\Book{\Title{An Introduction to the Theory of Infinite Series.}
+By \Author{T.~J.~I'a Bromwich},\DPnote{** [sic]; Thomas John I'Anson Bromwich}
+ M.A., F.R.S\@. 15s.\ net.}
+
+\Book{\Title{Introduction to the Theory of Fourier's Series
+and Integrals, and the Mathematical Theory of the Conduction
+of Heat.} By Prof.\ \Author{H.~S.~Carslaw}, M.A., D.Sc.,
+F.R.S.E\@. 14s.\ net.}
+
+\vfill
+
+\begin{center}
+  LONDON: MACMILLAN AND CO., LTD.
+\end{center}
+\DPPageSep{281.png}{269}%
+%[Blank Page]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% GUTENBERG LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%
+\flushpage\null\vfill
+\TNote{\Corrections}
+
+\License
+
+\begin{PGtext}
+*** END OF THE PROJECT GUTENBERG EBOOK CALCULUS MADE EASY ***
+
+***** This file should be named 33283-pdf.pdf or 33283-pdf.zip *****
+This and all associated files of various formats will be found in:
+    https://www.gutenberg.org/3/3/2/8/33283/
+
+Updated editions will replace the previous one--the old editions will
+be renamed.
+
+Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the
+United States without permission and without paying copyright
+royalties. Special rules, set forth in the General Terms of Use part
+of this license, apply to copying and distributing Project
+Gutenberg-tm electronic works to protect the PROJECT GUTENBERG-tm
+concept and trademark. Project Gutenberg is a registered trademark,
+and may not be used if you charge for an eBook, except by following
+the terms of the trademark license, including paying royalties for use
+of the Project Gutenberg trademark. If you do not charge anything for
+copies of this eBook, complying with the trademark license is very
+easy. You may use this eBook for nearly any purpose such as creation
+of derivative works, reports, performances and research. Project
+Gutenberg eBooks may be modified and printed and given away--you may
+do practically ANYTHING in the United States with eBooks not protected
+by U.S. copyright law. Redistribution is subject to the trademark
+license, especially commercial redistribution.
+
+START: FULL LICENSE
+
+THE FULL PROJECT GUTENBERG LICENSE
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg-tm mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase `Project
+Gutenberg'), you agree to comply with all the terms of the Full
+Project Gutenberg-tm License available with this file or online at
+www.gutenberg.org/license.
+
+Section 1. General Terms of Use and Redistributing Project
+Gutenberg-tm electronic works
+
+1.A. By reading or using any part of this Project Gutenberg-tm
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg-tm electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg-tm electronic work and you do not agree to be bound
+by the terms of this agreement, you may obtain a refund from the
+person or entity to whom you paid the fee as set forth in paragraph
+1.E.8.
+
+1.B. `Project Gutenberg' is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg-tm electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg-tm electronic works if you follow the terms of this
+agreement and help preserve free future access to Project Gutenberg-tm
+electronic works. See paragraph 1.E below.
+
+1.C. The Project Gutenberg Literary Archive Foundation (`the
+Foundation' or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg-tm electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg-tm mission of promoting
+free access to electronic works by freely sharing Project Gutenberg-tm
+works in compliance with the terms of this agreement for keeping the
+Project Gutenberg-tm name associated with the work. You can easily
+comply with the terms of this agreement by keeping this work in the
+same format with its attached full Project Gutenberg-tm License when
+you share it without charge with others.
+
+1.D. The copyright laws of the place where you are located also govern
+what you can do with this work. Copyright laws in most countries are
+in a constant state of change. If you are outside the United States,
+check the laws of your country in addition to the terms of this
+agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg-tm work. The Foundation makes no
+representations concerning the copyright status of any work in any
+country other than the United States.
+
+1.E. Unless you have removed all references to Project Gutenberg:
+
+1.E.1. The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg-tm License must appear
+prominently whenever any copy of a Project Gutenberg-tm work (any work
+on which the phrase `Project Gutenberg' appears, or with which the
+phrase `Project Gutenberg' is associated) is accessed, displayed,
+performed, viewed, copied or distributed:
+
+  This eBook is for the use of anyone anywhere in the United States and
+  most other parts of the world at no cost and with almost no
+  restrictions whatsoever. You may copy it, give it away or re-use it
+  under the terms of the Project Gutenberg License included with this
+  eBook or online at www.gutenberg.org. If you are not located in the
+  United States, you will have to check the laws of the country where
+  you are located before using this eBook.
+
+1.E.2. If an individual Project Gutenberg-tm electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase `Project
+Gutenberg' associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg-tm
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3. If an individual Project Gutenberg-tm electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any
+additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg-tm License for all works
+posted with the permission of the copyright holder found at the
+beginning of this work.
+
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg-tm
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg-tm.
+
+1.E.5. Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg-tm License.
+
+1.E.6. You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg-tm work in a format
+other than `Plain Vanilla ASCII' or other format used in the official
+version posted on the official Project Gutenberg-tm website
+(www.gutenberg.org), you must, at no additional cost, fee or expense
+to the user, provide a copy, a means of exporting a copy, or a means
+of obtaining a copy upon request, of the work in its original `Plain
+Vanilla ASCII' or other form. Any alternate format must include the
+full Project Gutenberg-tm License as specified in paragraph 1.E.1.
+
+1.E.7. Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg-tm works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8. You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg-tm electronic works
+provided that:
+
+* You pay a royalty fee of 20% of the gross profits you derive from
+  the use of Project Gutenberg-tm works calculated using the method
+  you already use to calculate your applicable taxes. The fee is owed
+  to the owner of the Project Gutenberg-tm trademark, but he has
+  agreed to donate royalties under this paragraph to the Project
+  Gutenberg Literary Archive Foundation. Royalty payments must be paid
+  within 60 days following each date on which you prepare (or are
+  legally required to prepare) your periodic tax returns. Royalty
+  payments should be clearly marked as such and sent to the Project
+  Gutenberg Literary Archive Foundation at the address specified in
+  Section 4, `Information about donations to the Project Gutenberg
+  Literary Archive Foundation.'
+
+* You provide a full refund of any money paid by a user who notifies
+  you in writing (or by email) within 30 days of receipt that s/he
+  does not agree to the terms of the full Project Gutenberg-tm
+  License. You must require such a user to return or destroy all
+  copies of the works possessed in a physical medium and discontinue
+  all use of and all access to other copies of Project Gutenberg-tm
+  works.
+
+* You provide, in accordance with paragraph 1.F.3, a full refund of
+  any money paid for a work or a replacement copy, if a defect in the
+  electronic work is discovered and reported to you within 90 days of
+  receipt of the work.
+
+* You comply with all other terms of this agreement for free
+  distribution of Project Gutenberg-tm works.
+
+1.E.9. If you wish to charge a fee or distribute a Project
+Gutenberg-tm electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from the Project Gutenberg Literary Archive Foundation, the manager of
+the Project Gutenberg-tm trademark. Contact the Foundation as set
+forth in Section 3 below.
+
+1.F.
+
+1.F.1. Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+works not protected by U.S. copyright law in creating the Project
+Gutenberg-tm collection. Despite these efforts, Project Gutenberg-tm
+electronic works, and the medium on which they may be stored, may
+contain `Defects,' such as, but not limited to, incomplete, inaccurate
+or corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged disk or
+other medium, a computer virus, or computer codes that damage or
+cannot be read by your equipment.
+
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the `Right
+of Replacement or Refund' described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg-tm trademark, and any other party distributing a Project
+Gutenberg-tm electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.
+
+1.F.4. Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you--`AS-IS', WITH NO
+OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5. Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.
+
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg-tm electronic works in
+accordance with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg-tm
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg-tm work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg-tm work, and (c) any
+Defect you cause.
+
+Section 2. Information about the Mission of Project Gutenberg-tm
+
+Project Gutenberg-tm is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg-tm's
+goals and ensuring that the Project Gutenberg-tm collection will
+remain freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg-tm and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation information page at
+www.gutenberg.org
+
+Section 3. Information about the Project Gutenberg Literary
+Archive Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non-profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation's EIN or federal tax identification
+number is 64-6221541. Contributions to the Project Gutenberg Literary
+Archive Foundation are tax deductible to the full extent permitted by
+U.S. federal laws and your state's laws.
+
+The Foundation's business office is located at 809 North 1500 West,
+Salt Lake City, UT 84116, (801) 596-1887. Email contact links and up
+to date contact information can be found at the Foundation's website
+and official page at www.gutenberg.org/contact
+
+Section 4. Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg-tm depends upon and cannot survive without
+widespread public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine-readable form accessible by the widest
+array of equipment including outdated equipment. Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular
+state visit www.gutenberg.org/donate
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: www.gutenberg.org/donate
+
+Section 5. General Information About Project Gutenberg-tm electronic works
+
+Professor Michael S. Hart was the originator of the Project
+Gutenberg-tm concept of a library of electronic works that could be
+freely shared with anyone. For forty years, he produced and
+distributed Project Gutenberg-tm eBooks with only a loose network of
+volunteer support.
+
+Project Gutenberg-tm eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.
+
+Most people start at our website which has the main PG search
+facility: www.gutenberg.org
+
+This website includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+\end{PGtext}
+\end{document}

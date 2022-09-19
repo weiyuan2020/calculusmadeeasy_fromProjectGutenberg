@@ -1,0 +1,233 @@
+
+\Chapter{XVII}{Integration}
+
+\First{The} great secret has already been revealed that this
+mysterious symbol~$\ds\int$, which is after all only a long~$S$,
+merely means ``the sum of,'' or ``the sum of all such
+quantities as.'' It therefore resembles that other
+symbol~$\sum$ (the Greek \emph{Sigma}), which is also a sign
+of summation. There is this difference, however, in
+the practice of mathematical men as to the use of
+these signs, that while $\sum$ is generally used to indicate
+the sum of a number of finite quantities, the integral
+sign~$\ds\int$ is generally used to indicate the summing up
+of a vast number of small quantities of indefinitely
+minute magnitude, mere elements in fact, that go
+to make up the total required. Thus $\ds\int dy = y$, and
+$\ds\int dx = x$.
+
+Any one can understand how the whole of anything
+can be conceived of as made up of a lot of little bits;
+and the smaller the bits the more of them there will
+be. Thus, a line one inch long may be conceived as
+made up of $10$~pieces, each $\frac{1}{10}$~of an inch long; or
+of $100$~parts, each part being $\frac{1}{100}$~of an inch long;
+\DPPageSep{195.png}{183}%
+or of $1,000,000$ parts, each of which is $\frac{1}{1,000,000}$~of an
+inch long; or, pushing the thought to the limits of
+conceivability, it may be regarded as made up of
+an infinite number of elements each of which is
+infinitesimally small.
+
+Yes, you will say, but what is the use of thinking
+of anything that way? Why not think of it straight
+off, as a whole? The simple reason is that there are
+a vast number of cases in which one cannot calculate
+the bigness of the thing as a whole without reckoning
+up the sum of a lot of small parts. The process of
+``\emph{integrating}'' is to enable us to calculate totals that
+otherwise we should be unable to estimate directly.
+
+Let us first take one or two simple cases to
+familiarize ourselves with this notion of summing
+up a lot of separate parts.
+
+Consider the series:
+\[
+1 + \tfrac{1}{2} + \tfrac{1}{4} + \tfrac{1}{8}
+  + \tfrac{1}{16} + \tfrac{1}{32} + \tfrac{1}{64} + \text{etc.}
+\]
+
+Here each member of the series is formed by taking
+it half the value of the preceding. What is the value
+of the total if we could go on to an infinite number
+of terms? Every schoolboy knows that the answer
+is~$2$. Think of it, if you like, as a line. Begin with
+\Figure[3.5in]{195a}{46}
+one inch; add a half inch, add a quarter; add an
+eighth; and so on. If at any point of the operation
+\DPPageSep{196.png}{184}%
+we stop, there will still be a piece wanting to make
+up the whole $2$~inches; and the piece wanting will
+always be the same size as the last piece added.
+Thus, if after having put together $1$,~$\frac{1}{2}$, and~$\frac{1}{4}$, we stop,
+there will be $\frac{1}{4}$~wanting. If we go on till we have
+added~$\frac{1}{64}$, there will still be $\frac{1}{64}$~wanting. The
+remainder needed will always be equal to the last
+term added. By an infinite number of operations
+only should we reach the actual $2$~inches. Practically
+we should reach it when we got to pieces so small
+that they could not be drawn---that would be after
+about $10$~terms, for the eleventh term is~$\frac{1}{1024}$. If we
+want to go so far that not even a Whitworth's
+measuring machine would detect it, we should merely
+have to go to about $20$~terms. A microscope would
+not show even the $18^{\text{th}}$~term! So the infinite number
+of operations is no such dreadful thing after all.
+The \emph{integral} is simply the whole lot. But, as we
+shall see, there are cases in which the integral
+calculus enables us to get at the \emph{exact} total that
+there would be as the result of an infinite number
+of operations. In such cases the integral calculus
+gives us a \emph{rapid} and easy way of getting at a result
+that would otherwise require an interminable lot of
+elaborate working out. So we had best lose no time
+in learning \emph{how to integrate}.
+\DPPageSep{197.png}{185}%
+
+\Section{Slopes of Curves, and the Curves themselves.}
+
+Let us make a little preliminary enquiry about the
+slopes of curves. For we have seen that differentiating
+a curve means finding an expression for its slope (or
+for its slopes at different points). Can we perform
+the reverse process of reconstructing the whole curve
+if the slope (or slopes) are prescribed for us?
+
+Go back to case~(2) on \Pageref{Case2}. Here we have the %[ ** Page]
+simplest of curves, a sloping line with the equation
+\[
+y = ax+b.
+\]
+\Figure[2.5in]{197a}{47}
+
+We know that here $b$~represents the initial height
+of~$y$ when $x= 0$, and that~$a$, which is the same as~$\dfrac{dy}{dx}$,
+is the ``slope'' of the line. The line has a constant
+slope. All along it the elementary triangles \raisebox{-12pt}{\Graphic{197b}}
+have the same proportion between height and base.
+Suppose we were to take the~$dx$'s, and~$dy$'s of finite
+\DPPageSep{198.png}{186}%
+magnitude, so that $10$~$dx$'s made up one inch, then
+there would be ten little triangles like
+\begin{center}
+  \Graphic{198a}
+\end{center}
+
+Now, suppose that we were ordered to reconstruct
+the ``curve,'' starting merely from the information
+that $\dfrac{dy}{dx} = a$. What could we do? Still taking the
+little~$d$'s as of finite size, we could draw $10$~of them,
+all with the same slope, and then put them together,
+end to end, like this:
+\Figure[3.25in]{198b}{48}
+And, as the slope is the same for all, they would join
+to make, as in \Fig{48}, a sloping line sloping with the
+correct slope $\dfrac{dy}{dx} = a$. And whether we take the $dy$'s
+and~$dx$'s as finite or infinitely small, as they are all
+\DPPageSep{199.png}{187}%
+alike, clearly $\dfrac{y}{x} = a$, if we reckon $y$~as the total of
+all the~$dy$'s, and $x$~as the total of all the~$dx$'s. But
+whereabouts are we to put this sloping line? Are
+we to start at the origin~$O$, or higher up? As the
+only information we have is as to the slope, we are
+without any instructions as to the particular height
+above~$O$; in fact the initial height is undetermined.
+The slope will be the same, whatever the initial height.
+Let us therefore make a shot at what may be wanted,
+and start the sloping line at a height~$C$ above~$O$.
+That is, we have the equation
+\[
+y = ax + C.
+\]
+
+It becomes evident now\Pagelabel{constant} that in this case the added
+constant means the particular value that $y$~has when
+$x = 0$.
+
+Now let us take a harder case, that of a line, the
+slope of which is not constant, but turns up more and
+more. Let us assume that the upward slope gets
+greater and greater in proportion as $x$~grows. In
+symbols this is:
+\[
+\frac{dy}{dx} = ax.
+\]
+Or, to give a concrete case, take $a = \frac{1}{5}$, so that
+\[
+\frac{dy}{dx} = \tfrac{1}{5} x.
+\]
+
+Then we had best begin by calculating a few of
+the values of the slope at different values of~$x$, and
+also draw little diagrams of them.
+\DPPageSep{200.png}{188}%
+\begin{DPalign*}
+\lintertext{\indent When}
+x &=0,\quad \frac{dy}{dx} = 0,\Z && \Graphic{200a1} \\
+x &=1,\quad \frac{dy}{dx} = 0.2, && \Graphic{200a2} \\
+x &=2,\quad \frac{dy}{dx} = 0.4, && \Graphic{200a3} \\
+x &=3,\quad \frac{dy}{dx} = 0.6, && \Graphic{200a4} \\
+x &=4,\quad \frac{dy}{dx} = 0.8, && \Graphic{200a5} \\
+x &=5,\quad \frac{dy}{dx} = 1.0. && \Graphic{200a6}
+\end{DPalign*}
+
+Now try to put the pieces together, setting each so
+that the middle of its base is the proper distance to
+the right, and so that they fit together at the corners;
+thus (\Fig{49}). The result is, of course, not a smooth
+\Figure[3in]{200b}{49}
+curve: but it is an approximation to one. If we had
+taken bits half as long, and twice as numerous, like
+\Fig{50}, we should have a better approximation. But
+\DPPageSep{201.png}{189}%
+for a perfect curve we ought to take each~$dx$ and its
+corresponding~$dy$ infinitesimally small, and infinitely
+numerous.
+
+\Figure[3in]{201a}{50}
+Then, how much ought the value of any~$y$ to be?
+Clearly, at any point~$P$ of the curve, the value of~$y$
+will be the sum of all the little~$dy$'s from~$0$ up to
+that level, that is to say, $\ds\int dy = y$. And as each~$dy$ is
+equal to $\frac{1}{5}x · dx$, it follows that the whole~$y$ will be
+equal to the sum of all such bits as~$\frac{1}{5}x · dx$, or, as we
+should write it, $\ds\int \tfrac{1}{5}x · dx$.
+
+Now if $x$ had been constant, $\ds\int \tfrac{1}{5}x · dx$ would have
+been the same as $\frac{1}{5} x \ds\int dx$, or~$\frac{1}{5}x^2$. But $x$~began by
+being~$0$, and increases to the particular value of~$x$ at
+the point~$P$, so that its average value from~$0$ to that
+point is~$\frac{1}{2}x$. Hence $\ds\int \tfrac{1}{5} x\, dx = \tfrac{1}{10} x^2$; or $y=\frac{1}{10}x^2$.
+
+But, as in the previous case, this requires the addition
+of an undetermined constant~$C$, because we have not
+\DPPageSep{202.png}{190}%
+been told at what height above the origin the curve
+will begin, when $x = 0$. So we write, as the equation
+of the curve drawn in \Fig{51},
+\[
+y = \tfrac{1}{10}x^2 + C.
+\]
+\Figure{202a}{51}
+
+
+\Exercises{XVI} (See \Pageref[page]{AnsEx:XVI} for Answers.)
+\begin{Problems}
+\Item{(1)} Find the ultimate sum of $\frac{2}{3} + \frac{1}{3} + \frac{1}{6} + \frac{1}{12} + \frac{1}{24} + \text{etc}$.
+
+\Item{(2)} Show that the series $1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \frac{1}{7}$\DPnote{[** TN: [sic], no +]}~etc.,
+is convergent, and find its sum to $8$~terms.
+
+\Item{(3)} If $\log_\epsilon(1+x) = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dfrac{x^4}{4} + \text{etc}$., find $\log_\epsilon 1.3$.
+
+\Item{(4)} Following a reasoning similar to that explained
+in this chapter, find~$y$,
+\[
+\text{(\textit{a}) if $\frac{dy}{dx} = \tfrac{1}{4} x$;\quad
+(\textit{b}) if $\frac{dy}{dx} = \cos x$.}
+\]
+
+\Item{(5)} If $\dfrac{dy}{dx} = 2x + 3$, find~$y$.
+\end{Problems}
+\DPPageSep{203.png}{191}%

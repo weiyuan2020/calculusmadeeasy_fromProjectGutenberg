@@ -1,0 +1,97 @@
+
+
+\Chapter{VII}{Successive Differentiation}
+
+\First{Let} us try the effect of repeating several times over
+the operation of differentiating a function (see \Pageref{function}).
+Begin with a concrete case.
+
+Let $y = x^5$.
+\begin{alignat*}{3}
+&\text{First differentiation, }  &&5x^4.              &&         \\
+&\text{Second differentiation, } &&5 × 4x^3           &&= 20x^3. \\
+&\text{Third differentiation, }  &&5 × 4 × 3x^2       &&= 60x^2. \\
+&\text{Fourth differentiation, } &&5 × 4 × 3 × 2x     &&= 120x.  \\
+&\text{Fifth differentiation, }  &&5 × 4 × 3 × 2 × 1  &&= 120.   \\
+&\text{Sixth differentiation, }  &&                   &&= 0.
+\end{alignat*}
+
+There is a certain notation, with which we are
+already acquainted (see \Pageref{notation}), used by some writers,
+that is very convenient. This is to employ the
+general symbol~$f(x)$ for any function of~$x$. Here
+the symbol~$f(~)$ is read as ``function of,'' without
+saying what particular function is meant. So the
+statement $y=f(x)$ merely tells us that $y$ is a function
+of~$x$, it may be $x^2$ or $ax^n$, or $\cos x$ or any other complicated
+function of~$x$.
+
+The corresponding symbol for the differential coefficient
+is~$f'(x)$, which is simpler to write than $\dfrac{dy}{dx}$.
+This is called the ``derived function'' of~$x$.
+\DPPageSep{062.png}{50}%
+
+Suppose we differentiate over again, we shall get
+the ``second derived function'' or second differential
+coefficient, which is denoted by~$f''(x)$; and so on.
+
+Now let us generalize.
+
+Let $y = f(x) = x^n$.
+\begin{DPalign*}[m]
+\lintertext{\indent First differentiation,}     f'(x) &= nx^{n-1}. \\
+\lintertext{\indent Second differentiation,}   f''(x) &= n(n-1)x^{n-2}. \\
+\lintertext{\indent Third differentiation,}   f'''(x) &= n(n-1)(n-2)x^{n-3}. \\
+\lintertext{\indent Fourth differentiation,} f''''(x) &= n(n-1)(n-2)(n-3)x^{n-4}. \\
+    &\llap{\text{etc.,}} \text{ etc.}
+\end{DPalign*}
+
+But this is not the only way of indicating successive
+differentiations. For,
+\begin{DPalign*}
+\lintertext{if the original function be }             y &= f(x);  \\
+\lintertext{once differentiating gives }  \frac{dy}{dx} &= f'(x); \\
+\lintertext{twice differentiating gives } \frac{d\left(\dfrac{dy}{dx}\right)}{dx} &= f''(x);
+\end{DPalign*}
+and this is more conveniently written as~$\dfrac{d^2y}{(dx)^2}$, or
+more usually~$\dfrac{d^2y}{dx^2}$. Similarly, we may write as the
+result of thrice differentiating, $\dfrac{d^3y}{dx^3} = f'''(x)$.
+\tb
+\DPPageSep{063.png}{51}%
+
+
+\Examples.
+Now let us try $y = f(x) = 7x^4 + 3.5x^3 - \frac{1}{2}x^2 + x - 2$.
+\begin{align*}
+\frac{dy}{dx}     &= f'(x) = 28x^3 + 10.5x^2 - x + 1, \\
+\frac{d^2y}{dx^2} &= f''(x) = 84x^2 + 21x - 1,        \\
+\frac{d^3y}{dx^3} &= f'''(x) = 168x + 21,             \\
+\frac{d^4y}{dx^4} &= f''''(x) = 168,                  \\
+\frac{d^5y}{dx^5} &= f'''''(x) = 0.
+\end{align*}
+In a similar manner if $y = \phi(x) = 3x(x^2 - 4)$,
+\begin{align*}
+\phi'(x)    &= \frac{dy}{dx} = 3\bigl[x × 2x + (x^2 - 4) × 1\bigr] = 3(3x^2 - 4), \\
+\phi''(x)   &= \frac{d^2y}{dx^2} = 3 × 6x = 18x, \\
+\phi'''(x)  &= \frac{d^3y}{dx^3} = 18, \\
+\phi''''(x) &= \frac{d^4y}{dx^4} = 0.
+\end{align*}
+
+
+%[** TN: Heading indented in the original]
+\Exercises{IV} (See \Pageref[page]{AnsEx:III} for Answers.)
+
+Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following expressions:
+\begin{Problems}[2]
+\Item{(1)} $y = 17x + 12x^2$.
+\Item{(2)} $y = \dfrac{x^2 + a}{x + a}$.
+\ResetCols{1}
+
+\Item{(3)} $y = 1 + \dfrac{x}{1} + \dfrac{x^2}{1×2} + \dfrac{x^3}{1×2×3} + \dfrac{x^4}{1×2×3×4}$.
+
+\Item{(4)} Find the 2nd and~3rd derived functions in
+the Exercises~III. (\Pageref{examples2}), No.~1 to No.~7, and in the
+Examples given (\Pageref{examples3}), No.~1 to No.~7.
+\end{Problems}
+\DPPageSep{064.png}{52}%
+

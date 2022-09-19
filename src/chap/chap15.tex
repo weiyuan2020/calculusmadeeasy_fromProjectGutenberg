@@ -1,0 +1,364 @@
+
+\Chapter[SINES AND COSINES]{XV}{How to deal with Sines and Cosines}
+
+\First{Greek} letters being usual to denote angles, we will
+take as the usual letter for any variable angle the
+letter~$\theta$ (``theta'').
+
+Let us consider the function
+\[
+y= \sin \theta.
+\]
+
+\Figure{177a}{43}
+
+What we have to investigate is the value of $\dfrac{d(\sin \theta)}{d \theta}$;
+or, in other words, if the angle~$\theta$ varies, we have to
+find the relation between the increment of the sine
+and the increment of the angle, both increments being
+indefinitely small in themselves. Examine \Fig{43},   %[ **","?]
+wherein, if the radius of the circle is unity, the height
+of~$y$ is the sine, and $\theta$ is the angle. Now, if $\theta$ is
+\DPPageSep{178.png}{166}%
+supposed to increase by the addition to it of the
+small angle $d \theta$---an element of angle---the height
+of~$y$, the sine, will be increased by a small element~$dy$.
+The new height~$y + dy$ will be the sine of the new
+angle $\theta + d \theta$, or, stating it as an equation,
+\[
+y+dy = \sin(\theta + d \theta);
+\]
+and subtracting from this the first equation gives
+\[
+dy = \sin(\theta + d \theta)- \sin \theta.
+\]
+
+The quantity on the right-hand side is the difference
+between two sines, and books on trigonometry tell
+us how to work this out. For they tell us that if
+$M$ and~$N$ are two different angles,
+\[
+\sin M - \sin N = 2 \cos\frac{M+N}{2}·\sin\frac{M-N}{2}.
+\]
+
+If, then, we put $M= \theta + d \theta$ for one angle, and
+$N= \theta$ for the other, we may write
+\begin{DPalign*}
+dy &= 2 \cos\frac{\theta + d\theta + \theta}{2}
+      · \sin\frac{\theta + d\theta - \theta}{2},\\
+\lintertext{or,}
+dy &= 2\cos(\theta + \tfrac{1}{2}d\theta)
+     · \sin\tfrac{1}{2} d\theta.
+\end{DPalign*}
+
+But if we regard $d \theta$ as indefinitely small, then in
+the limit we may neglect~$\frac{1}{2} d \theta$ by comparison with~$\theta$,
+and may also take $\sin\frac{1}{2} d \theta$ as being the same as~$\frac{1}{2} d \theta$.
+The equation then becomes:\Pagelabel{differsin}
+\begin{DPalign*}
+dy &= 2 \cos \theta × \tfrac{1}{2} d \theta; \\
+dy &= \cos \theta · d \theta, \\
+\lintertext{and, finally,}
+\dfrac{dy}{d \theta} &= \cos \theta.
+\end{DPalign*}
+\DPPageSep{179.png}{167}%
+
+The accompanying curves, \Figs{44}{and}{45}, show,
+plotted to scale, the values of $y=\sin \theta$, and $\dfrac{dy}{d\theta}=\cos\theta$,
+for the corresponding values of~$\theta$.
+%[** TN: Graphs in the original are reversed; cos is labeled Fig. 44., etc.]
+\Figure[4in]{179a}{44}\Pagelabel{erratum2}
+\Figure[4in]{179b}{45}
+\tb
+\DPPageSep{180.png}{168}%
+
+Take next the cosine.\Pagelabel{differcos}
+
+Let $y=\cos \theta$.
+
+Now $\cos \theta=\sin\left(\dfrac{\pi}{2}-\theta\right)$.
+
+Therefore
+\begin{align*}
+&\begin{aligned}
+dy = d\left(\sin\left(\frac{\pi}{2} - \theta\right)\right)
+  &= \cos\left(\frac{\pi}{2} - \theta\right) × d(-\theta), \\
+  &= \cos\left(\frac{\pi}{2} - \theta\right) × (-d\theta),
+\end{aligned} \\
+&\frac{dy}{d\theta} = -\cos\left(\frac{\pi}{2} - \theta\right).
+\intertext{\indent And it follows that}
+&\frac{dy}{d\theta} = -\sin \theta.
+\end{align*}
+
+\tb
+
+Lastly, take the tangent.
+%
+\begin{DPalign*}
+\lintertext{\indent Let}
+y  &= \tan \theta, \\
+dy &= \tan(\theta + d\theta) - \tan\theta. \\
+\intertext{\indent Expanding, as shown in books on trigonometry,}
+\tan(\theta + d\theta)
+   &= \frac{\tan\theta + \tan d\theta}
+           {1 - \tan\theta·\tan d\theta}; \\
+\lintertext{whence}
+dy &= \frac{\tan\theta + \tan d\theta}
+           {1-\tan\theta·\tan d\theta} - \tan\theta \\
+   &= \frac{(1 + \tan^2\theta)\tan d\theta}
+           {1-\tan\theta·\tan d\theta}.
+\end{DPalign*}
+\DPPageSep{181.png}{169}%
+
+Now remember that if $d\theta$ is indefinitely diminished,
+the value of~$\tan d\theta$ becomes identical with~$d\theta$, and
+$\tan\theta · d\theta$ is negligibly small compared with~$1$, so that
+the expression reduces to
+\begin{DPalign*}
+dy &= \frac{(1+\tan^2 \theta)\, d\theta}{1}, \\
+\lintertext{so that}
+\frac{dy}{d\theta} &= 1 + \tan^2\theta, \\
+\lintertext{or}
+\frac{dy}{d\theta} &= \sec^2 \theta.
+\end{DPalign*}
+
+Collecting these results, we have:
+\[
+\begin{array}{|*{2}{>{\quad}c<{\quad}|}}
+\hline
+\DStrut y   & \dfrac{dy}{d\theta} \\
+\hline
+\Strut\sin\theta & \cos\theta \\
+\cos\theta & -\sin\theta \\
+\Strut\tan\theta & \sec^2 \theta\\
+\hline
+\end{array}
+\]
+
+Sometimes, in mechanical and physical questions,
+as, for example, in simple harmonic motion and in
+wave-motions, we have to deal with angles that increase
+in proportion to the time. Thus, if $T$ be the
+time of one complete \emph{period}, or movement round the
+circle, then, since the angle all round the circle is $2\pi$~radians,
+or~$360°$, the amount of angle moved through
+in time~$t$, will be
+\begin{DPalign*}
+\theta &= 2\pi\frac{t}{T},\quad \text{in radians,} \\
+\lintertext{or}
+\theta &= 360\frac{t}{T},\quad \text{in degrees.}
+\end{DPalign*}
+\DPPageSep{182.png}{170}%
+
+If the \emph{frequency}, or number of periods per second,
+be denoted by~$n$, then $n = \dfrac{1}{T}$, and we may then write:
+\[
+\theta=2\pi nt.
+\]
+Then we shall have
+\[
+y = \sin 2\pi nt.
+\]
+
+If, now, we wish to know how the sine varies with
+respect to time, we must differentiate with respect, not
+to~$\theta$, but to~$t$. For this we must resort to the artifice
+explained in Chapter~IX., \Pageref{chap:IX}, and put %[ ** Page]
+\[
+\frac{dy}{dt} = \frac{dy}{d\theta} · \frac{d\theta}{dt}.
+\]
+
+Now $\dfrac{d\theta}{dt}$ will obviously be~$2\pi n$; so that
+\begin{align*}
+\frac{dy}{dt} &= \cos \theta × 2\pi n \\
+              &= 2\pi n · \cos 2\pi nt. \\
+\intertext{\indent Similarly, it follows that}
+\frac{d(\cos 2\pi nt)}{dt} &= -2\pi n · \sin 2\pi nt.
+\end{align*}
+
+
+\Section{Second Differential Coefficient of Sine or Cosine.}
+
+We have seen that when $\sin \theta$ is differentiated with
+respect to~$\theta$ it becomes $\cos \theta$; and that when $\cos \theta$ is
+differentiated with respect to~$\theta$ it becomes $-\sin \theta$;
+or, in symbols,
+\[
+\frac{d^2(\DPtypo{\cos \theta}{\sin \theta})}{d\theta^2} = -\sin \theta.
+\]
+\DPPageSep{183.png}{171}%
+
+So we have this curious result that we have found
+a function such that if we differentiate it twice over,
+we get the same thing from which we started, but
+with the sign changed from $+$~to~$-$.
+
+The same thing is true for the cosine; for differentiating
+$\cos\theta$ gives us $-\sin\theta$, and differentiating
+$-\sin\theta$ gives us $-\cos\theta$; or thus:
+\[
+\frac{d^2(\cos\theta)}{d\theta^2} = -\cos\theta.
+\]
+
+\emph{Sines and cosines are the only functions of which
+the second differential coefficient is equal \emph{(and of
+opposite sign to)} the original function.}
+
+\tb
+
+\Examples.\Pagelabel{intex3}
+With what we have so far learned we can now
+differentiate expressions of a more complex nature.
+
+(1) $y=\arcsin x$.
+
+If $y$ is the arc whose sine is~$x$, then $x = \sin y$.
+\[
+\frac{dx}{dy}=\cos y.
+\]
+
+Passing now from the inverse function to the original
+one, we get
+\begin{DPalign*}
+\frac{dy}{dx}
+  &= \frac{1}{\;\dfrac{dx}{dy}\;} = \frac{1}{\cos y}. \\
+\lintertext{\indent Now}
+\cos y
+  &= \sqrt{1-\sin^2 y}=\sqrt{1-x^2}; \\
+\lintertext{hence}
+\frac{dy}{dx}
+  &= \frac{1}{\sqrt{1-x^2}},
+\end{DPalign*}
+a rather unexpected result\DPtypo{}{.}
+\DPPageSep{184.png}{172}%
+
+(2) $y=\cos^3 \theta$.
+
+This is the same thing as $y=(\cos \theta)^3$.
+
+Let $\cos\theta=v$;\quad then $y=v^3$;\quad $\dfrac{dy}{dv}=3v^2$.
+\begin{align*}
+\frac{dv}{d\theta} &= -\sin\theta.\\
+\frac{dy}{d\theta} &=  \frac{dy}{dv} × \frac{dv}{d\theta}
+                    = -3 \cos^2 \theta \sin\theta.
+\end{align*}
+
+(3) $y=\sin(x+a)$.
+
+Let $x+a=v$;\quad then $y=\sin v$.
+\[
+\frac{dy}{dv}=\cos v;\qquad
+\frac{dv}{dx}=1 \quad\text{and}\quad
+\frac{dy}{dx}=\cos(x+a).
+\]
+
+(4) $y=\log_\epsilon \sin \theta$.
+
+Let $\sin\theta=v$;\quad $y=\log_\epsilon v$.
+\begin{align*}
+\frac{dy}{dv}      &= \frac{1}{v};\quad \frac{dv}{d\theta}=\cos\theta;\\
+\frac{dy}{d\theta} &= \frac{1}{\sin\theta} × \cos\theta = \cot\theta.
+\end{align*}
+
+(5) $y=\cot\theta=\dfrac{\cos\theta}{\sin\theta}$.
+\begin{align*}
+\frac{dy}{d\theta}
+  &= \frac{-\sin^2\theta - \cos^2 \theta}{\sin^2 \theta}\\
+  &= -(1+\cot^2 \theta) = -\cosec^2 \theta.
+\end{align*}
+
+(6) $y=\tan 3\theta$.
+
+Let $3\theta=v$;\quad $y=\tan v$;\quad $\dfrac{dy}{dv}=\sec^2 v$.
+\[
+\frac{dv}{d\theta}=3;\quad
+\frac{dy}{d\theta}=3 \sec^2 3\theta.
+\]
+\DPPageSep{185.png}{173}%
+
+(7) $y = \sqrt{1+3\tan^2\theta}$;\quad $y=(1+3 \tan^2 \theta)^{\efrac{1}{2}}$.
+
+Let $3\tan^2\theta=v$.
+\begin{DPalign*}
+y &= (1+v)^{\efrac{1}{2}};\quad
+\frac{dy}{dv} = \frac{1}{2\sqrt{1+v}} \text{ (see \Pageref{ExNo1});} \\
+%
+\frac{dv}{d\theta}
+  &= 6\tan\theta \sec^2 \theta \\
+%
+\intertext{(for, if $\tan \theta = u$,}
+v &= 3u^2;\quad \frac{dv}{du} = 6u;\quad \frac{du}{d\theta} = \sec^2 \theta; \\
+%
+\lintertext{hence}
+\frac{dv}{d\theta}
+  &= 6 \DPtypo{}{(}\tan \theta \sec^2 \theta) \\
+\lintertext{hence}
+%
+\frac{dy}{d\theta}
+  &= \frac{6\tan\theta \sec^2\theta}{2\sqrt{1 + 3\tan^2\theta}}.
+\end{DPalign*}
+
+(8) $y=\sin x \cos x$. \Pagelabel{example1}
+\begin{align*}
+\frac{dy}{dx}
+  &= \sin x(-\sin x) + \cos x × \cos x \\
+  &= \cos^2 x - \sin^2 x.
+\end{align*}
+
+
+\Exercises{XIV} (See \Pageref[page]{AnsEx:XIV} for Answers.)
+\begin{Problems}
+\Item{(1)} Differentiate the following:
+\begin{align*}
+\text{(i)}\quad   y &= A \sin\left(\theta - \frac{\pi}{2}\right).\\
+\text{(ii)}\quad  y &= \sin^2 \theta;\quad \text{and } y = \sin 2\theta.\\
+\text{(iii)}\quad y &= \sin^3 \theta;\quad \text{and } y = \sin 3\theta.
+\end{align*}
+
+\Item{(2)} Find the value of~$\theta$ for which $\sin\theta × \cos\theta$ is a
+maximum.
+
+\Item{(3)} Differentiate $y=\dfrac{1}{2\pi} \cos 2\pi nt$.
+\DPPageSep{186.png}{174}%
+
+\Item{(4)} If $y = \sin a^x$, find~$\dfrac{dy}{dx}$.
+
+\Item{(5)} Differentiate $y=\log_\epsilon \cos x$.
+
+\Item{(6)} Differentiate $y=18.2 \sin(x+26°)$.
+
+\Item{(7)} Plot the curve $y=100 \sin(\theta-15°)$; and show
+that the slope of the curve at $\theta = 75°$ is half the
+maximum slope.
+
+\Item{(8)} If $y=\sin \theta·\sin 2\theta$, find~$\dfrac{dy}{d\theta}$.
+
+\Item{(9)}  If $y=a·\tan^m(\theta^n)$, find the differential coefficient
+of~$y$ with respect to~$\theta$.
+
+\Item{(10)} Differentiate $y=\epsilon^x \sin^2 x$.
+
+\Item{(11)} Differentiate the three equations of Exercises~XIII.
+(\Pageref{XIII:4}), No.~4, and compare their differential
+coefficients, as to whether they are equal, or nearly
+equal, for very small values of~$x$, or for very large
+values of~$x$, or for values of~$x$ in the neighbourhood
+of $x=30$.
+
+\Item{(12)} Differentiate the following:
+\begin{align*}%[** TN: Reformatted in two columns]
+\text{(i)}\quad   y &= \sec x.    &
+\text{(ii)}\quad  y &= \arccos x. \\
+\text{(iii)}\quad y &= \arctan x. &
+\text{(iv)}\quad  y &= \arcsec x. \\
+\text{(v)}\quad   y &= \tan x × \sqrt{3 \sec x}. &&
+\end{align*}
+
+\Item{(13)} Differentiate $y=\sin(2\theta +3)^{2.3}$.
+
+\Item{(14)} Differentiate $y=\theta^3+3 \sin(\theta+3)-3^{\sin \theta} - 3^\theta$.
+
+\Item{(15)} Find the maximum or minimum of $y=\theta \cos \theta$.
+\end{Problems}
+\DPPageSep{187.png}{175}%
+
